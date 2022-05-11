@@ -4,15 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fundo fixo de tela</title>
     <style>
         body {
+            
+            background: black url('imagens/wallpaper002.jpg') center center /cover no-repeat fixed;
+            
+
+            /* shorthand background = color, image, position, repeat, size, attachment
+            MAS NA PRÁTICA NÃO VAI FUNCIONAR ASSIM, VAI TER QUE FAZER UMA DECLARAÇÃO SEPARADA PRO [SIZE]!!!
+            OU FAZER A SEQUÊNCIA ANTERIOR E BOTAR UM / ANTES DO SIZE (Q VAI ANTES DO REPEAT)!!!
+
+            antes:
             background-color: black;
             background-image: url(imagens/wallpaper002.jpg);
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
             height: 100vh;
+            background-attachment: fixed;
+            
+            */
         }
         main {
             background-color: white;
@@ -21,6 +33,7 @@
             margin: auto;
             border: 1px solid black;
             border-radius: 15px;
+            max-width: 400px;
             
         }
     </style>
@@ -28,7 +41,7 @@
 <body>
     <main>
         <h1>Teste de imagem de fundo</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, nulla. Aliquam quo a eos tempore sequi mollitia, eaque itaque consectetur. Laborum, qui labore veritatis cumque culpa quisquam minus adipisci sed! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi repellendus consequuntur ducimus earum quia odit, praesentium cupiditate necessitatibus incidunt, libero accusamus quod unde provident. Ab consectetur sit amet ipsum veniam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quibusdam ad mollitia ex ab reprehenderit, fugiat illum laudantium fugit quidem reiciendis esse! Sit reiciendis modi, aliquid libero eum dolorum assumenda.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, nulla. Aliquam quo a eos tempore sequi mollitia, eaque itaque consectetur. Laborum, qui labore veritatis cumque culpa quisquam minus adipisci sed! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi repellendus consequuntur ducimus earum quia odit, praesentium cupiditate necessitatibus incidunt, libero accusamus quod unde provident. Ab consectetur sit amet ipsum veniam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quibusdam ad mollitia ex ab reprehenderit, fugiat illum laudantium fugit quidem reiciendis esse! Sit reiciendis modi, aliquid libero eum dolorum assumenda. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere illo aut eum adipisci quasi temporibus optio accusantium obcaecati dolorem, recusandae quaerat architecto sequi voluptates minima repudiandae iure explicabo officiis nostrum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non similique rem nobis omnis dolores nam sequi placeat animi iusto, facere dolor distinctio quibusdam. Vel, labore minus omnis adipisci quae id! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi quos illum necessitatibus a quaerat molestias inventore maiores repellendus magni autem. Modi, praesentium expedita. Quidem dolore doloremque qui eum nemo quos! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam cupiditate eaque minus saepe tenetur delectus alias sed consequatur tempora optio possimus, illum facilis magnam cumque nam iure rem id illo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat a omnis distinctio nesciunt eligendi iure facilis architecto. Corrupti, nihil. Quasi eaque nihil incidunt esse vitae at labore, vero magnam fuga. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero reiciendis eveniet nesciunt, minus saepe excepturi id placeat obcaecati hic, tempora natus, voluptates quod minima deserunt voluptatum magnam earum nam architecto?</p>
     </main>
 </body>
 </html>
