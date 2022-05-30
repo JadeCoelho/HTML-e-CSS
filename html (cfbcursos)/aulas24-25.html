@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        dialog {
+            padding: 0;
+            border: 0;
+            border-radius: 7px;
+            box-shadow: 0 0 10px black;
+            flex-direction: column; /*transformei o display em flex e botei um elemento embaixo do outro */
+        }
+        .dt {
+            background-color: #eee;
+            border-top-left-radius: inherit;
+            border-top-right-radius: inherit;
+            padding: 7px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #aaa;
+            height: 40px;
+        }
+
+        .dc {
+            background-color: #fff;
+            padding: 7px;
+        }
+
+        .dr {
+            background-color: #fff;
+            border-bottom-left-radius: inherit;
+            border-bottom-right-radius: inherit;
+            padding: 7px;
+            border-top: 1px solid #aaa;
+        }
+
+        #fechar {
+            border: none;
+            border-radius: 7px;
+            padding: 7px;
+            cursor: pointer;
+            outline: none;
+        }
+        #fechar:hover {
+            background-color: #eee;
+
+        }
+    </style>
+    <script>
+        function fechar() {
+            document.getElementById("abrir").innerHTML="Abrir";
+            document.getElementById("d1").removeAttribute("open")
+        }
+        function abrir() {
+            document.getElementById("fechar").innerHTML="Fechar";
+            document.getElementById("d1").setAttribute("open","");
+        }
+        function controle() {
+            if(document.getElementById("d1").open) {
+                fechar()
+            }else {
+                abrir()
+                document.getElementById("titulo").innerHTML= "título"
+            }
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <button id="abrir" onclick="controle(titulo)">Abrir</button>
+    <button id="abrir" onclick="controle('teste','teste')">Abrir 2</button>
+    <dialog id="d1">
+        <div class="dt">
+            <h3 id="titulo">Caixa de diálogo</h3>
+        </div>
+        <div class="dc">
+            <p>Caixa de diálogo nativa do HTML5</p>
+            <p>CFB Cursos / Curso de HTML5 completo e profissional</p>
+        </div>
+        <div class="dr">
+            <button id="fechar" onclick="fechar()">Fechar</button>
+        </div>
+
+    </dialog>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function abrir() {
+            document.getElementById('d1').setAttribute("open","")
+        }
+
+        function fechar() {
+            document.getElementById('d1').removeAttribute("open")
+        }
+
+    </script>
+
+    <style>
+        .cursos {
+            color: brown;
+            display: flex;
+
+
+        }
+
+        .curso {
+            border: 1px solid black;
+            padding: 5px;
+            background-color: antiquewhite;
+            margin: 5px;
+
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="abrir()">Abrir</button>
+    <button onclick="fechar()">Fechar</button>
+    <dialog open id="d1">
+        <p><dfn title="Linguagem de marcação para web">HTML</dfn> Hypertext Markup Language é uma linguagem de marcação utilizada na construção de páginas na Web.</p>
+        <p><dfn><abbr title="Formatação para páginas web">CSS</abbr></dfn> Cascading Style Sheets recurso para adicionar estilos/formatações a um documento web.</p>
+    </dialog>
+
+    <article>
+        <div >
+            <h1>bldv,l</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est aperiam doloremque temporibus nemo, dignissimos quisquam corrupti quasi! Sequi in, esse tenetur magni impedit cupiditate sint et, ullam dolorem enim at.</p>
+            <h2>ifjcvidvic</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius voluptates nam tenetur illo quae corporis temporibus ipsam magni, veritatis libero minima quisquam tempore aliquam ipsa voluptatem consectetur aperiam, repudiandae ad?</p>
+            <a href="#">Confira</a>
+        </div>
+
+        <div class="cursos">
+            <div class="curso">
+                <h3>sssssdfcfdv</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta et eos doloremque quibusdam delectus, earum doloribus minus officiis facilis sunt. Maxime dicta nesciunt beatae facere a laboriosam fuga consequatur ullam?</p>
+            </div>
+            <div class="curso">
+                <h3>efcd</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, odit! Numquam voluptatibus fugiat culpa tenetur, asperiores odit pariatur deserunt ut sint accusantium, assumenda corporis molestias exercitationem est incidunt amet voluptates! Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ab accusamus quo sit eius, quibusdam earum atque! Aliquam, quisquam maxime? Assumenda vel quibusdam voluptatum odio alias eos labore, non culpa.</p>
+            </div>
+        </div>
+    </article>
+
+
+</body>
+</html>
