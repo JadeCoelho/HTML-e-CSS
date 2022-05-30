@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        button {
+            color: greenyellow;
+            background-color: black;
+            border-radius: 3px;
+            font-weight: bold;
+            padding: 6px;
+        }
+
+        canvas {
+            border: 1px solid black;
+            margin-top: 15px;
+        }
+
+        pre {
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        details[open] summary::marker{
+            color: palevioletred;
+
+        }
+
+        details summary::marker{
+            color: blueviolet;
+
+        }
+
+        article {
+            background-color: rgb(164, 130, 162);
+            border: 1px solid black;
+            padding: 15px;
+            margin: 10px;
+            width: 300px;
+
+        }
+
+        details {
+            color: rgb(5, 5, 93);
+        }
+    </style>
+    
+    <script>
+        function desenha() {
+            var canvas = document.getElementById('canvas')
+            var ctx = canvas.getContext('2d')
+            ctx.fillRect(25, 25, 100, 100)
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <p>Ó um botãozinho </p>
+    <button type="button" form="f_cadastro" onclick="alert('CFB Cursos')">
+        CFB Cursos
+
+    </button>
+    <br>
+
+    <canvas id="canvas" width="500px" height="500px">
+        Seu navegador não tem suporte ao elemento canvas.
+    </canvas>
+    <script>desenha()</script>
+
+    <p>O segmento de código a seguir representa o corpo básico de um programa em linguagem C:</p>
+        <pre>
+            <code>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&rsaquo;
+#include &lt;locale.h&gt;
+int main (){
+    setlocale(LC_ALL, "Portuguese");
+    printf("Código básico em C");
+    system("pause");
+    return 0
+}
+            </code>
+        </pre>
+
+        <p>Meu curso atual é de HTML5. Mas há outros que preciso aprender, por exemplo:</p>
+        <ul>
+            <del cite="" datetime="30-05-2022_14:10"> <!-- o cite é pra mostrar um doc que explica o motivo de excluir algo (ou inserir algo, se for com a tag ins), e o datetime mostra a data e a hora em q houve essa modificação (excluído ou inserido)-->
+                <li>CSS</li>
+            </del>
+            <del>
+                <li>JavaScript</li>
+            </del>
+            <li>Photoshop</li>
+            <li>Angular</li>
+            <li>JQuery</li>
+            <ins cite="">
+                <li>React</li>
+            </ins>
+        </ul>
+
+        <details open>
+            <summary>Cursos do CFB Cursos</summary>
+            <article>
+                <p>HTML5</p>
+                <p>CSS3</p>
+                <p>JavaScript</p>
+                <p>C++</p>
+                <p>Arduino</p>
+                <p>PHP / MySQL</p>
+            </article>
+
+            <article>
+                <p>HTML5</p>
+                <p>CSS3</p>
+                <p>JavaScript</p>
+                <p>C++</p>
+                <p>Arduino</p>
+                <p>PHP / MySQL</p>
+            </article>
+
+            <article>
+                <p>HTML5</p>
+                <p>CSS3</p>
+                <p>JavaScript</p>
+                <p>C++</p>
+                <p>Arduino</p>
+                <p>PHP / MySQL</p>
+            </article>
+           
+        </details>
+</body>
+</html>
