@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .quebra {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        form {
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: beige;
+        }
+        #dv-bt {
+            display: flex;
+            margin-top: 10px;
+            
+        }
+
+        label {
+            margin-top: 10px;
+        }
+        
+
+      
+    </style>
+    <title>Formulário</title>
+</head>
+<body>
+    <form name="fcadastro" action="#" method="post" enctype="multipart/form-data">
+        <label class="quebra" for="">Hora:</label>
+        <input type="time" name="fhora" id="" >
+
+        <label class="quebra" for="">Data:</label>
+        <input type="date" name="fdata" id="" min="2022-05-31" max="2022-06-10">
+
+        <label for="">Mês: </label>
+        <input type="month" name="fmes" id="">
+
+        <label for="">Semana:</label>
+        <input type="week" name="fsemana" id="">
+
+        <input type="hidden" name="canal" value="cfbcursos">
+        <input type="hidden" name="curso" value="html5">
+
+        <label class="quebra" for="">Selecione uma cor:</label>
+        <input type="color" name="fcor" id="">
+
+        <label class="quebra" for="">Digite seu e-mail:</label>
+        <input type="email" name="femail" id="">
+
+        <label class="quebra" for="">Nome:</label>
+        <input type="text" name="fnome" id="" size="25" class="quebra" required>
+
+        <label for="">Senha:</label>
+        <input type="password" name="fsenha" id="" maxlength="10" class="quebra" required>
+        
+        <label for="">O que você mais assiste na TV:</label>
+        <input type="checkbox" name="cxfilme" id="">Filmes
+        <input type="checkbox" name="cxserie" id="">Séries
+        <input type="checkbox" name="cxanime" id="">Animes
+        <input type="checkbox" name="cxdocumentario" id="">Documentários
+        <input type="checkbox" name="cxnoticia" id="">Notícias
+        <input type="checkbox" name="cxnovela" id="">Novelas
+
+        <label for="" class="quebra">Possui carteira de habilitação?</label>
+        <input type="radio" name="fcarteira" id="" value="s">Sim
+        <input type="radio" name="fcarteira" id="" value="n">Não
+
+        <label for="" class="quebra">Telefone de contato:</label>
+        <input type="tel" name="ftel" id="" pattern="\([0-9]{2}\)[9]{1}[0-9]{4}-[0-9]{4}" placeholder="(xx)9xxxx-xxxx">
+
+        <label class="quebra" for="">Escolha um número:</label>
+        <input type="number" name="fnumero" id="" min="0" max="10">
+
+        <label class="quebra" for="">Pesquisa:</label>
+        <input type="search" name="fpesquisa" id="">
+
+        <label class="quebra" for="">Selecione os arquivos:</label>
+        <input type="file" name="farquivo" id="" multiple accept=".jpg, .gif, .png">
+
+        <label class="quebra" for="">Informe a URL</label>
+        <input type="url" name="furl" id="">
+        
+        
+        <input class="quebra" type="image" src="mapa-da-França-7.jpg" alt="" width="300px" style="margin-top: 15px;">
+
+
+
+        
+        <div id="dv-bt">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+            <input type="button" value="nd">
+        </div>
+    </form>
+</body>
+</html>
