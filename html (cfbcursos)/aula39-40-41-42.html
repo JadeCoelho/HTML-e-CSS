@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .quebra {
+            display: block;
+        }
+
+        form {
+            background-color: azure;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        input, label, fieldset, textarea {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="get" name="fcadastro">
+        <select name="fcores" id="" multiple size="3">
+            <option value="pt">Preto</option>
+            <option value="br">Branco</option>
+            <option value="az">Azul</option>
+            <option value="vm">Vermelho</option>
+            <option value="rs">Rosa</option>
+            <option value="vd">Verde</option>
+
+        </select>
+        
+        <input  list="f-cores" name="fcor">
+        <datalist id="f-cores">
+            <option value="red">Vermelho</option>
+            <option value="green">Verde</option>
+            <option value="blue">Azul</option>
+            <option value="gray">Cinza</option>
+            <option value="black">Preto</option>
+
+        </datalist>
+
+
+        <fieldset>
+            <legend>Dados básicos</legend>
+            <label class="quebra" for="">Nome</label>
+            <input type="text" name="fnome" id="">
+    
+            <label class="quebra" for="">Telefone</label>
+            <input type="tel" name="" id="" pattern="(\[0-9]{2}\)9[0-9]{4}-[0-9]{4}" placeholder="(xx)9xxxx-xxxx">
+
+        </fieldset>
+
+       <br>
+
+       <fieldset disabled>
+           <legend>Informações</legend>
+        <label class="quebra" for="">Possui carro?</label>
+        <input type="radio" name="fcarro" id="">Sim
+        <input type="radio" name="fcarro" id="">Não
+
+        <label class="quebra" for="">Possui casa própria?</label>
+        <input type="radio" name="fcasa" id="">Sim
+        <input type="radio" name="fcasa" id="">Não
+
+       </fieldset>
+
+       <textarea name="fcomentario" id="" cols="50" rows="10" maxlength="500" autofocus></textarea>
+
+
+        <input class="quebra" type="submit" value="Enviar" name="fenviar">
+    </form>
+    
+</body>
+</html>
