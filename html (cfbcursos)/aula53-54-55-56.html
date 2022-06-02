@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        iframe {
+            width: 400px;
+            height: 200px;
+            display: block;
+            border: none;
+        }
+
+        #banner {
+            width: 750px;
+            height: 248px;
+            border: none;
+
+        }
+
+        /* eu teria que usar uma imagem com dimensões exatamente iguais às configuradas no banner pra não ficar aquela barra de rolagem, mas fiquei preguicinha, só por isso  */
+        
+    </style>
+    
+
+    <script>
+        function trocabanner() {
+            var num = Math.floor(Math.random()*3);
+            var imgs=['b1.webp','b2.png','b3.jpeg'];
+            document.getElementById('banner').src=imgs[num];
+        }
+        function iniciar() {
+            trocabanner();
+
+        }
+        window.addEventListener("load", iniciar)
+    </script>
+</head>
+<body>
+    <h1>CFB Cursos</h1>
+    <p>Aula da tag mark, funcionando que nem um marca-texto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dolorum quo repudiandae blanditiis tempora architecto animi fuga, dolor temporibus sequi voluptatem nesciunt <mark>exercitationem aspernatur</mark> ex in non voluptates nobis cum!1</p>
+
+    <a href="aula48-49-50-51-52.html" target="main">Aula de iframe parte 1</a>
+    <a href="https://www.w3.org/2009/cheatsheet/" target="main">Site W3</a>
+
+    <iframe src="" frameborder="0" name="main"></iframe>
+
+    <iframe src="" name="banner" id="banner"></iframe>
+    
+</body>
+</html>
