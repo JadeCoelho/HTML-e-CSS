@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #seg {
+            border-collapse: collapse;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 5px;
+            background-color: white;
+        }
+        table {
+            border: 1px solid black;
+            padding: 5px;
+            background-color: rgb(255, 252, 215);
+        }
+        thead {
+            color: green;
+        }
+
+        tbody {
+            color: blueviolet;
+        }
+
+        tfoot {
+            color: brown;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+
+        .alternativa {
+            list-style-type: decimal-leading-zero;
+            list-style-image: url(favicon.ico);
+        }
+
+        var {
+            color: rgb(13, 85, 13);
+        }
+
+        video {
+            width: 400px;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>a</td>
+            <td>b</td>
+            <td>c</td>
+            <td>d</td>
+        </tr>
+        <tr>
+            <td rowspan="5">Seminovos</td>
+        </tr>
+        <tr>
+            <td>Fabricante</td>
+            <td>Modelo</td>
+            <td>Valor</td>
+        </tr>
+        <tr>
+            <td>Honda</td>
+            <td>WRV</td>
+            <td>R$ 70.000,00</td>
+        </tr>
+        <tr>
+            <td>Volkswagem</td>
+            <td>Golf GTI</td>
+            <td>R$ 80.000,00</td>
+        </tr>
+        <tr>
+            <td>Ford</td>
+            <td>Ranger</td>
+         
+        </tr>
+
+        <tr>
+            <td colspan="3">Tabela de preços</td>
+            <td>oi</td>
+        </tr>
+    </table>
+<br>
+    <table id="seg">
+      
+        <thead>
+                <tr>
+                    <th>Fabricante</th>
+                    <th>Modelo</th>
+                    <th>Valor</th>
+                </tr>
+        </thead>
+
+        <tbody>
+                <tr>
+                    <td>Honda</td>
+                    <td>WRV</td>
+                    <td>R$ 70.000,00</td>
+                </tr>
+
+                <tr>
+                    <td>Volkswagem</td>
+                    <td>Golf GTI</td>
+                    <td>R$ 80.000,00</td>
+                </tr>
+
+                <tr>
+                    <td>Ford</td>
+                    <td>Ranger</td>    
+                    <td>-</td> 
+                </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="2">Tabela de preços</td>
+                <td>oi</td>
+            </tr>
+        </tfoot>
+    </table>
+    <br>
+
+    <p><time datetime="12-25">Natal</time></p>
+    <p><time datetime="2000-12-25">25 de dezembro de 2000</time></p>
+    <p><time datetime="1889-11-15">15 de novembro de 1889</time></p>
+    <p><time datetime="10:00">Horário da aula do cfb cursos</time></p>
+
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>PHP</li>
+        <li>C++</li>
+        <li>C#</li>
+    </ul>
+
+    <ul class="alternativa">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>PHP</li>
+        <li>C++</li>
+        <li>C#</li>
+    </ul>
+
+    <p>Relação geral entre energia e massa, na teoria da relatividade de Einstein. <var>E</var> = <var>m</var><var>c</var><sup>2</sup>.</p>
+
+    <video src="motto.mp4" controls autoplay muted>Vídeo não suportado</video> <!-- coloca algo assim entre a tag pra aparecer no site caso o vídeo n funcione em algum navegador-->
+</body>
+</html>
