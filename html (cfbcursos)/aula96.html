@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style96.css">
+</head>
+<body>
+    <nav class="tabs">
+        <button data-btab onclick="abretab(event,'cu')" id="primeiro">C#</button>
+        <button data-btab onclick="abretab(event,'html')" id="">HTML Completo e Profissional</button>
+        <button data-btab onclick="abretab(event,'ardu')" id="">Arduino</button>
+    </nav>
+
+    <article class="conteudo" id="cu">
+        <span class="fecha" onclick="this.parentElement.style.display='none'">x</span>
+        <h3>C#</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et aperiam commodi eaque enim dolore, nulla eligendi maxime odit id itaque voluptatem provident odio numquam corporis tempora, facilis, tempore aliquid dolores.</p>
+    </article>
+
+    <article class="conteudo" id="html">
+        <span class="fecha" onclick="this.parentElement.style.display='none'">x</span>
+        <h3>HTML Completo e Profissional</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit exercitationem soluta nam reiciendis, modi neque laboriosam, quod eos laborum autem dicta suscipit hic sit accusantium nobis ullam vitae! Suscipit, iste?</p>
+    </article>
+
+    <article class="conteudo" id="ardu">
+        <span class="fecha" onclick="this.parentElement.style.display='none'">x</span>
+        <h3>Arduino</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed temporibus aliquid consequatur iusto? Laborum est quis sequi perspiciatis voluptate velit veniam qui quibusdam aut exercitationem? Officia, doloremque. Quo, sunt omnis?</p>
+    </article>
+
+    <script src="script96.js"></script>
+</body>
+</html>

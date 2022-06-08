@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aiai... café</title>
     <link rel="stylesheet" href="style84.css">
-    <script src="script84.js"></script>
+    
 </head>
 <body>
     <header>
@@ -49,7 +49,13 @@
         <article data-anima="direita">ccccccc</article>
     </section>
     <section id="contato" class="flexivel">
-        <article data-anima="esquerda"><a href="http://www.casadobarista.com.br/">Casa do barista</a></article>
+        <article data-anima="esquerda">
+            <a href="http://www.casadobarista.com.br/">Casa do barista</a>
+            <img src="b1.webp" alt="" class="ccur" onclick="">
+            <img src="b1.webp" alt="" class="ccur" onclick="">
+            <img src="b1.webp" alt="" class="ccur" onclick="">
+            <img src="b1.webp" alt="" class="ccur" onclick="">
+        </article>
         <article data-anima="centro"><a href="http://graomestrecafe.com.br/">Grão mestre café</a></article>
         <article data-anima="direita"><a href="http://coffeefive.com.br/">Coffee Five</a></article>
     </section>
@@ -61,20 +67,30 @@
     </section>
     
     <section >
-        <p>CFB CURSOS</p>
-        <p>cfb</p>
-        <p>cursos</p>
-    </section>
+        <article class="ccur">
+            <img src="b1.webp" alt="banner1"  onclick="cliquemodal(this)" class="mini">
+            <img src="b1.webp" alt="banner2" onclick="cliquemodal(this)" class="mini">
+            <img src="b1.webp" alt="banner3"  onclick="cliquemodal(this)" class="mini">
+            <img src="b1.webp" alt="banner4" onclick="cliquemodal(this)" class="mini">
+        </article>
+   </section>
 
     <section class="pa p2">
         <p>CFB CURSOS</p>
         <p>cfb</p>
         <p>cursos</p>
+        
     </section>
 
     <footer>
         <p>Página com layout full page para a aula de HTML do curso CFB Cursos.</p>
     </footer>
 
+    <div id="janelamodal" class="jmodal escondejanela">
+        <span id="fechar" class="xmodal">x</span>
+        <img src="" alt="" id="imgmodal" class="">
+        <p id="txtmodal" class="tmodal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti ut tempora est assumenda, aspernatur ducimus maiores quia consequuntur facere, reiciendis blanditiis excepturi deserunt, in veniam doloribus placeat nemo nostrum illum.</p>
+    </div>
+    <script src="script84.js"></script>
 </body>
 </html>
