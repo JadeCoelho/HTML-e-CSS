@@ -1,0 +1,19 @@
+table {
+    width: 600px;
+    height: 200px;
+    margin: auto;
+}
+td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.vazio {
+    border: 0;
+    padding: 0;
+}
+
+h1, h2, p {
+    text-align: center;
+}
+
