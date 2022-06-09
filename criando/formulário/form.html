@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de cadastro</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <div class="img">
+            <img src="img/undraw_static_website_re_x70h.svg" alt="">
+        </div>
+
+        <div class="form">
+            <form action="#">
+                <div class="fheader">
+                        <div class="title">
+                            <h1>Cadastre-se</h1>
+                        </div>
+                        <div class="botaologin">
+                            <button><a href="#">Entrar</a></button>
+                        </div>
+                </div>
+
+                <div class="inputs">
+                    <div class="caixa">
+                        <label for="nome">Primeiro nome:</label>
+                        <input type="text" name="nome" id="nome" placeholder="Digite seu primeiro nome" required>
+                    </div>
+
+                        <div class="caixa">
+                            <label for="sobrenome">Sobrenome:</label>
+                            <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite seu sobrenome" required>
+                        </div>
+
+                        <div class="caixa">
+                            <label for="email">E-mail:</label>
+                            <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+                        </div>
+
+                        <div class="caixa">
+                            <label for="numero">Celular:</label>
+                            <input type="tel" name="numero" id="numero" placeholder="(xx) 9xxxx-xxxx" required>
+                        </div>
+
+                        <div class="caixa">
+                            <label for="senha">Senha:</label>
+                            <input type="password" name="senha" id="senha" min="6" max="8" placeholder="Digite sua senha" required>
+                        </div>
+
+                        <div class="caixa">
+                            <label for="confirmasenha">Confirme sua senha:</label>
+                            <input type="confirmpassword" name="confirmasenha" id="confirmasenha" min="6" max="8" placeholder="Repita sua senha" required>
+                        </div>
+                        
+                        <div class="caixaa">
+                            <label for="idade">Sua faixa etária:</label><br>
+                            <input type="radio" name="idade" id="idade">Menos de 18 anos
+                            <input type="radio" name="idade" id="idade">Entre 18 anos e 30 anos
+                            <input type="radio" name="idade" id="idade">Mais de 30 anos e menos de 60 anos
+                            <input type="radio" name="idade" id="idade">Mais de 60 anos
+                        </div>
+                </div>
+
+                <div class="cadastrar">
+                    <button><a href="#">Cadastrar</a></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+   
+</body>
+</html>
