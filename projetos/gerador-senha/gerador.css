@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+
+* {
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #010914;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Rubik Glitch', cursive;
+    color: white;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.container-input {
+    max-width: 450px;
+    margin: 15px 0;
+}
+
+.container-input span{
+    color: white;
+    font-size: 20px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    border-radius: 10px;
+    background-color: rgb(172, 172, 172);
+    height: 18px;
+    outline: none;
+    margin-top: 8px;
+}
+
+.botao-cta {
+    height: 40px;
+    background-color: #023859;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 40px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+
+}
+
+.botao-cta:hover {
+    background-color: #011C40;
+}
+
+.container-senha {
+    max-width: 450px;
+    margin: 14px o;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.titulo {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    margin-top: 25px;
+    margin-bottom: 8px;
+}
+
+#senha {
+    background-color: #011C40;
+    height: 60px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 1px solid rgb(172, 172, 172);
+    transition: transform 0.5s;
+}
+
+#senha:hover {
+    transform: scale(1.1);
+}
+
+.tooltip {
+    color: white;
+    position: relative;
+    top: 20px;
+    padding: 6px 8px;
+    background: rgba(172, 172, 172, 0.479);
+    text-align: center;
+    font-size: 15px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.container-senha:hover .tooltip {
+visibility: visible;
+bottom: 50px;
+opacity: 1;
+}
+
+.hide {
+    display: none;
+}
