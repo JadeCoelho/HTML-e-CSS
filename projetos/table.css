@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&display=swap');
+
+body {
+    background-color: rgb(95, 95, 181);
+    box-sizing: border-box;
+    font-family: 'Amaranth', sans-serif;
+       
+}
+
+#titulo h1 {
+    font-size: 50px;
+    text-align: center;
+
+}
+#container {
+    overflow: auto;
+}
+
+table {
+    width: 500px;
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 10px 10px;
+}
+
+td {
+    min-width: 100px;
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+    padding: 10px;
+    background-color: rgba(255, 163, 244, 0.552);
+}
+
+td:hover {
+    background-color:rgba(141, 202, 255, 0.426);
+    transform: scale(1.5);
+}
+
+tr {
+    margin-bottom: 20px;
+}
+
+.invisivel {
+    border: none;
+    background: none;
+}
+
+.invisivel:hover {
+        border: none;
+        background: none;
+        background-color: none;
+}
+
+p {
+    color: white;
+}
+
+

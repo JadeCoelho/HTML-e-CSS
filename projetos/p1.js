@@ -161,14 +161,69 @@ function palavranatela(){
 }
 
 function verifica(letra) {
-    if (tentativas > 0)
-    {
-    mudarletra('' + letra) 
+    if (tentativas > 0) {
+     mudarletra("tecla-" + letra) 
+     comparalista(letra)
+     palavranatela()
     }
+    
 }
 
-function mudarletra(){
-    document.getElementById().style.background='black';
-    document.getElementById().style.color='white';
+function mudarletra(tecla){
+    document.getElementById(tecla).style.background='black';
+    document.getElementById(tecla).style.color='white';
 
+}
+
+function comparalista(letra) {
+    const pos = sorteionome.indexOf(letra)
+    if (pos < 0) {
+        tentativas --
+        carregaimagem()
+        //verificar se ainda há tentativas
+    } else {
+        for (i=0; i < sorteionome.length; i++) {
+            if(sorteionome[i] == letra) {
+                lista[i] = letra
+            }
+        }
+    }
+
+    let vitoria = true
+    for (i=0; i < sorteionome.length; i++) {
+        if(sorteionome[i] != lista[i]){
+            vitoria = false
+        }
+    }
+        if (vitoria == true) {
+            //msg na tela
+            tentativas = 0
+        }
+
+        function carregaimagem() {
+            switch(tentativas){
+                case 5:
+                    document.getElementById('imagem').style.background = "url('img2.png')";
+                break;
+                case 4:
+                        document.getElementById('imagem').style.background = 'url(`img3.png`)';
+                break;
+                case 3:
+                            document.getElementById('imagem').style.background = 'url(`img4.png`)';
+                break;
+                case 2:
+                document.getElementById('imagem').style.background = 'url(`img5.png`)';
+                break;
+                case 1:
+                    document.getElementById('imagem').style.background = 'url(`img6.png`)';
+                break;
+                case 0:
+                    document.getElementById('imagem').style.background = 'url(`img7.png`)';
+                break;
+                default:
+                    document.getElementById('imagem').style.background = 'url(`img1.png`)';
+
+
+            }
+        }
 }

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formulario.css">
+    <title>Formulário</title>
+</head>
+<body>
+    <div id="topo">
+        <h1 id="titulo">Cadastro dos participantes</h1>
+        <p id="subtitulo">Este formulário auxilia uma pesquisa sobre redes sociais. Por favor, preencha os campos abaixo.</p>
+    </div>
+    <form action="">
+        <fieldset class="dados">
+            <div class="campos">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+            <div class="campos">
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" name="sobrenome" id="sobrenome" required>
+            </div>
+        </fieldset>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+
+        <div class="marcar">
+            <label for="">Gênero:</label>
+            <input type="radio" name="genero" id="F"> Feminino
+            <input type="radio" name="genero" id="M"> Masculino
+            <input type="radio" name="genero" id="N"> Prefiro não dizer
+        </div>
+
+        <div>
+            <label for="idade">Faixa etária:</label>
+            <select name="idade" id="idade" required>
+                <option value="" selected disabled>Selecione</option>
+                <option value="18menos">Menos de 18 anos</option>
+                <option value="18mais">Entre 18 anos e 30 anos</option>
+                <option value="30mais">Mais de 30 anos e menos de 60 anos</option>
+                <option value="60mais">Mais de 60 anos</option>
+            </select>
+        </div>
+
+        <fieldset class="dados">
+            <div class="marcar">
+                <label for="" max="3">Selecione as 3 mídias sociais que você mais utiliza:</label>
+                <div class="coluna1">
+                    <input type="checkbox" name="facebook" id="facebook"> Facebook
+                    <input type="checkbox" name="instagram" id="instagram"> Instagram
+                    <input type="checkbox" name="twitter" id="twitter"> Twitter
+                    <input type="checkbox" name="youtube" id="youtube"> Youtube
+                    <input type="checkbox" name="tiktok" id="tiktok"> TikTok
+                </div>
+                <div class="coluna2">
+                    <input type="checkbox" name="pinterest" id="pinterest"> Pinterest
+                    <input type="checkbox" name="snapchat" id="snapchat"> Snapchat
+                    <input type="checkbox" name="reddit" id="reddit"> Reddit
+                    <input type="checkbox" name="twitch" id="twitch"> Twitch
+                    <input type="checkbox" name="outros" id="outros"> Outros
+                </div>
+            </div>
+        </fieldset>
+
+        <div class="marcar">
+            <label for="">Você gostaria de reduzir o tempo que passa na internet?</label>
+            <input type="radio" name="tempointernet" id="sim"> Sim
+            <input type="radio" name="tempointernet" id="nao"> Não
+        </div>
+
+        <div>
+            <label for="">Caso a resposta anterior seja "Sim", nos conte um pouco sobre o motivo:</label>
+            <textarea name="motivo" id="motivo" rows="6" maxlength="500" width="26em"></textarea>
+        </div>
+
+        <button type="submit" id="concluir">Concluir</button>
+    </form>
+</body>
+</html>

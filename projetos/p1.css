@@ -21,10 +21,12 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
 }
-img {
+
+#imagem {
+    background-image: url("img1.png");
     width: 200px;
-
-
+    height: 200px;
+    background-repeat: no-repeat;
 }
 
 #palavra {
