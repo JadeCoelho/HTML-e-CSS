@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.cards {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+}
+
+.cards h1 {
+    font-size: 40px;
+    margin: 0 0 30px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.servidores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    margin: 20px;
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 4px;
+    transition: all .3s ease;
+}
+
+.conteudo .fa {
+    font-size: 70px;
+    margin: 16px 0;
+}
+
+.conteudo > * {
+    flex: 1 1 100%;
+}
+
+.conteudo:hover {
+    color: white;
+}
+
+.conteudo:hover a {
+    background: white;
+    border-color: white;
+    font-weight: 700;
+}
+
+.c1:hover {
+    border-color: rgb(28,153,230);
+    background: rgb(28,153,230);
+}
+
+.c1:hover a {
+    color:rgb(28,153,230);
+}
+
+.c2:hover {
+    background: linear-gradient(45deg,#F2C572,#F26B1D,#5267D9,#9430BF,#D92B7C);
+    border-color: #9430BF;
+
+}
+
+.c2:hover a {
+    color: #9430BF;
+
+}
+
+.c3:hover {
+    background: rgb(242,0,0);
+    border-color: rgb(242,0,0);
+}
+
+.c3:hover a {
+    color: rgb(242,0,0);
+}
+
+.conteudo h2 {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 16px 0;
+    letter-spacing: 1px;
+}
+
+.conteudo p {
+    font-size: 18px;
+    
+}
+
+.conteudo a {
+    margin: 22px;
+    background: black;
+    color: white;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 15px 0;
+    border-radius: 25px;
+    transition: .3s ease;
+}
+
+.conteudo a:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width:900px) {
+    .servidores {
+        display: flex;
+        flex-direction: column;
+    }
+}
