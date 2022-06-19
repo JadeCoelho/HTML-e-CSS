@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --fundo-body: #121416;
+    --fonte: #fff;
+    --botoes: #0772EB;
+    --cards: #1E212C;
+}
+
+body {
+    background-color: var(--fundo-body);
+}
+
+.container {
+    max-width: 830px;
+    margin: auto;
+}
+
+header .top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+
+}
+
+.top h2 {
+    color: var(--fonte);
+}
+
+i {
+    color: var(--botoes);
+    margin-right: 10px;
+}
+
+.section1 {
+    display: flex;
+
+}
+
+.ebook {
+    width: 230px;
+    height: auto;
+}
+
+.titulo {
+    color: var(--fonte);
+    font-size: 30px;
+}
