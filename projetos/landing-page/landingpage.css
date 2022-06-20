@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+.nav-barra {
+    color: white;
+    border-bottom: 0.5px solid gray;
+    width: 100%;
+    height: 80px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 50px;
+    padding: 0 30px;
+}
+
+ul {
+    list-style: none;
+    height: inherit;
+    line-height: 80px;
+    padding: 0 50px;
+}
+
+li {
+    display: inline-flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+li a {
+    text-decoration: none;
+    padding: 0 30px;
+    color: white;
+    font-weight: bold;
+    width: 110px;
+}
+
+li a::after {
+    content: "";
+    width: 0%;
+    height: 5px;
+    background: #51c451;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+li a:hover::after {
+    width: 100%;
+    color: #51c451;
+}
+
+main {
+    height: 100vh;
+
+}
+
+.conteudo {
+    margin-top: 10%;
+    margin-left: 100px;
+    width: 40%;
+    float: left;
+}
+
+
+h2 {
+    font-size: 50px;
+}
+
+span {
+    color: #51c451;
+}
+
+p {
+    margin-top: 10px;
+    text-align: justify;
+    letter-spacing: 1px;
+}
+
+.botoes {
+    margin-top: 20px;
+    background: white;
+    cursor: pointer;
+    color: rgb(80, 195, 80);
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.botoes:hover {
+    background: rgb(202, 202, 202);
+}
+
+main img {
+    width: 30%;
+    float: right;
+    margin-right: 100px;
+    margin-top: 50px;
+    filter: grayscale(2);
+    transition: filter 4s;
+}
+
+main img:hover {
+    filter: grayscale(0);
+    transition: 0.5s;
+}
+
+@media(max-width: 700px) {
+    .nav-barra {
+        height: 90px;
+        padding: 0 10px;
+    }
+    
+    .logo {
+        font-size: 20px;
+        padding: 0 10px;
+    }
+    
+    ul {
+        line-height: 90px;
+        padding: 0 10px;
+    }
+    
+    li {
+        display: inline;
+        justify-content: space-around;
+        position: relative;
+    }
+    
+    li a {
+        padding: 0 10px;
+    }
+    
+    li a::after {
+        top: -35%;
+    }
+    
+    .conteudo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20px;
+    }
+  
+    
+    .botoes {
+        margin-top: 20px;
+        padding: 12px;
+        margin-right: 20px;
+    }
+    
+    
+    main img {
+        width: 40%;
+        margin-right: 20px;
+        margin-top: 250px;
+    }
+    
+}
