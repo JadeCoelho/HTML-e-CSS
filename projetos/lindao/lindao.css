@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+:root {
+    --destaque: #14d188;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ola {
+    background-image: url('bg.png');
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+#ola::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .6;
+    z-index: -1;
+}
+
+#ola .ola {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+
+#ola h1 {
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: texto-revelado .5s ease forwards;
+    animation-delay: 1s;
+}
+
+#ola h1:nth-child(1) {
+    animation-delay: 1s;
+}
+#ola h1:nth-child(2) {
+    animation-delay: 2s;
+}
+#ola h1:nth-child(3) {
+    animation: nome-revelado .5s ease forwards;
+    animation-delay: 3s;
+}
+
+#ola h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: var(--destaque);
+    animation: revela-texto 1s ease;
+    animation-delay: .3s;
+}
+
+@keyframes revela-texto {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes texto-revelado {
+    100% {
+        color: white;
+
+    }
+}
+
+
+@keyframes nome-revelado {
+    100% {
+        color: var(--destaque);
+        font-weight: 500;
+
+    }
+}
+
+#ola h1:nth-child(1) span {
+    animation-delay: .5s;
+}
+#ola h1:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+#ola h1:nth-child(3) span {
+    animation-delay: 2.5s;
+}
+
+.botao {
+    display: inline-block;
+    padding: 10px 30px;
+    color: var(--destaque);
+    background-color: transparent;
+    border: 2px solid var(--destaque);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 36px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+
+.botao:hover {
+    color: black;
+    background-color: var(--destaque);
+
+}
+
+.logo h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.logo h1 span {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--destaque);
+}
+
+#servicos .servicos {
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.titulo {
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+#servicos .servicos-topo p {
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+
+
+#servicos .servicos-final {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+#servicos .servicos-itens {
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: url('bgg.png');
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#servicos .servicos-itens::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .8;
+    z-index: -1;
+}
+
+#servicos .servicos-final .icone {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#servicos .servicos-itens h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#servicos .servicos-itens p {
+    color: white;
+    text-align: justify;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+}
+
+#projetos .projetos {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#projetos .projetos h2 {
+    margin-bottom: 50px;
+}
+
+#projetos .projetos-itens {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#projetos .projetos-info {
+    padding: 30px;
+    flex-basis: 50%;
+    background-image: linear-gradient(60deg, rgb(58, 58, 58) 0%, rgb(114, 114, 114) 100%);
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+
+#projetos .projetos-info h3 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+#projetos .projetos-info p {
+    text-align: justify;
+}
+
+#projetos .projetos-img {
+    flex-basis: 50%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+#projetos .projetos-img::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, rgb(58, 58, 58) 0%, rgb(114, 114, 114) 100%);
+    opacity: .7;
+}
+
+#projetos .projetos-itens:hover .projetos-img img {
+    transform: scale(1.1);
+}
+
+#projetos .projetos-img img {
+    transition: .3s ease transform;
+}
+
+#sobre .sobre {
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+#sobre .coluna-esquerda {
+    width: 250px;
+    height: 360px;
+}
+
+#sobre .coluna-direita {
+    width: 100%;
+}
+
+
+#sobre .coluna-direita p {
+    margin-bottom: 20px;
+}
+
+#sobre .coluna-esquerda .sobre-img {
+    position: relative;
+    border: 10px solid white;
+    height: 100%;
+    width: 100%;
+    
+}
+
+#sobre .coluna-esquerda .sobre-img::after {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 19px;
+    height: 98%;
+    width: 98%;
+    border: 7px solid var(--destaque);
+    z-index: -1;
+}
+
+#contato .contato {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#contato .contato-itens {
+    width: 20%;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 18px 0 #0000002c;
+    transition: .3s ease box-shadow;
+
+}
+
+#contato .contato-itens:hover {
+    box-shadow: 0px 0px 5px 0 #0000002c;
+}
+
+#contato .contato-itens .icone {
+    color: var(--destaque);
+    margin-bottom: 5px;
+    display: flex;
+    width: 40px;
+    height: 40px;
+
+}
+
+#contato .contato-itens h3 {
+    font-size: 1.5rem;
+}
+
+#footer {
+    background-image: linear-gradient(60deg, rgb(58, 58, 58) 0%, rgb(114, 114, 114) 100%);
+}
+
+#footer .footer {
+    min-height: 150px;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+#footer .footer p {
+    color: white;
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+@media only screen and (min-width:768px) {
+    .botao {
+        font-size: 2.5rem;
+        padding: 20px 60px;
+    }
+
+    .titulo {
+        font-size: 6rem;
+
+    }
+
+    #ola h1 {
+        font-size: 7rem;
+    }
+
+
+    #servicos .servicos-final .servicos-itens {
+        flex-basis: 45%;
+        margin: 2.5%;
+    }
+
+
+    #projetos .projetos-itens {
+        flex-direction: row;
+    }
+
+    #projetos .projetos-itens:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    #projetos .projetos-itens {
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    #projetos .projetos-info {
+        height: 100%;
+    }
+
+    #projetos .projetos-img {
+        height: 100%;
+    }
+
+
+    #sobre .sobre {
+    flex-direction: row;
+    }
+
+    #sobre .coluna-esquerda {
+        width: 600px;
+        height: 400px;
+        padding-left: 60px;
+    }
+
+    #sobre .sobre .coluna-esquerda .sobre-img::after {
+        left: -45px;
+        top: 34px;
+        height: 98%;
+        width: 98%;
+        border: 10px solid var(--destaque);
+    }
+
+    #sobre .coluna-direita {
+        text-align: left;
+        padding: 30px;
+    }
+
+    #sobre .coluna-direita .titulo {
+        text-align: left;
+    }
+
+    
+    #contato .contato {
+        flex-direction: row;
+        padding: 100px 0;
+        align-items: center;
+        justify-content: center;
+        min-height: 20vh;
+    }
+
+    #contato .contato-itens {
+       width: 20%;
+       display: flex;
+       padding: 20px;
+       margin: 20px;
+    }
+}
+
