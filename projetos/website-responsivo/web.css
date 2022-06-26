@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h3 {
+    font-size: 44px;
+    line-height: 55px;
+    color: #121212;
+    font-weight: 600;
+}
+
+h6 {
+    font-size: 20px;
+    line-height: 32px;
+    color: #6c6c6c;
+    font-weight: normal;
+    margin-top: 16px;
+}
+
+.botao-principal {
+    font-weight: 700;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    padding: 0 32px;
+    font-size: 16px;
+    line-height: 48px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s ease-out 0s;
+    z-index: 5;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 6.5rem;
+    background: transparent;
+    transition: all 0.5s ease;
+    position: fixed;
+    z-index: 10000;
+}
+
+.nav .navbar-toggler {
+    display: none;
+    border: none;
+    outline: none;
+}
+
+.nav .navbar-toggler .toggler-icon {
+    width: 27px;
+    height: 3px;
+    background-color: #121212;
+    margin: 5px 0;
+    position: relative;
+    display: block;
+    transition: all 0.5s ease-out 0s;
+}
+
+.nav .menu-bar {
+
+}
+
+.nav .menu-bar .menu-itens {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.nav .menu-bar .menu-itens li {
+    margin: 0 15px;
+}
+
+.nav .menu-bar .menu-itens li a {
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.nav .menu-bar .menu-itens li a:hover {
+    color: #103A58;
+}
+
+.nav .navbar-social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav .navbar-social span {
+    font-size: 18px;
+    font-weight: 600;
+    padding-right: 10px;
+    color: #6c6c6c;
+}
+.nav .navbar-social ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav .navbar-social ul li {
+    margin: 0 7px;
+}
+
+.nav .navbar-social ul li a {
+    color: #6c6c6c;
+    font-size: 22px;
+
+}
+
+.bg {
+    background-image: url(media_coop_filer_public_2020_12_17_business-people-hd-wallpapers.jpg);
+    width: 100%;
+    height: 120vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.overlay {
+    background-image: linear-gradient(180deg, rgba(170,178,183,0.7458333675266982) 44%, rgba(255,153,10,0.7122199221485469) 100%);
+    width: 100%;
+    height: 100%;
+}
+
+.shape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.shape img {
+    width: 100%;
+    display: block;
+}
+
+.texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.texto p {
+    color: #1d1d1d;
+}
+
+.texto .header-botao {
+    margin-top: 22px;
+}
+
+.texto .header-botao li {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+}
+
+.texto .header-botao li a.botao-principal {
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: #fff;
+    border: 0;
+    line-height: 50px;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.16);
+}
+
+.texto .header-botao li a.botao-principal i {
+    margin-left: 5px;
+    color: #000;
+}
+
+.texto .header-botao .um {
+    color: #fff;
+}
+
+.texto .header-botao .um::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image:linear-gradient(90deg, rgba(248, 128, 24, 0.652) 44%, rgba(255,170,50,0.9251050762101716) 100%);
+        z-index: -1;
+        transition: all 0.3s ease;
+        background-position: right center;
+}
+
+.texto .header-botao .um:hover::before {
+    background-image:linear-gradient(90deg,  rgba(255,170,50,0.9251050762101716) 31%, rgba(248, 128, 24, 0.652) 44%);
+    background-position: left center;
+}
+
+.texto .header-botao .dois {
+    color: #000;
+}
+.texto .header-botao .dois:hover {
+    box-shadow: 0 3px 25px 0 rgba(0,0,0,0.16);
+}
+
+#embrulho {
+    margin: 5rem 7rem 10rem 7rem;
+}
+
+.servico {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#servico p {
+    margin-bottom: 6rem;
+}
+
+.servico .servico-conteudo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.servico .servico-conteudo .caixa {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.servico .servico-conteudo .caixa .caixa1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.servico .servico-conteudo .caixa .caixa1 .servicos {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.servico .servico-conteudo .caixa .caixa1 .servicos i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #535CF1;
+}
+
+.servico .servico-conteudo .caixa .caixa1 .servicos .servico-conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: justify;
+}
+
+.servico .servico-conteudo .img {
+    width: 40%;
+
+}
+
+
+.servico .servico-conteudo .img img {
+    width: 100%;
+    
+}
+
+.pacote {
+    display: block;
+    text-align: center;
+}
+
+.pacote p {
+    margin-bottom: 6rem;
+}
+
+.pacote .tabela {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pacote .basico {
+    width: 335px;
+    height: 100%;
+    border: 1px solid #535CF1;
+    border-radius: 20px;
+}
+
+.pacote .basico h3 {
+    text-align: center;
+    font-weight: 300;
+    padding: 40px 0;
+    background-color: #ecf0f1;
+    transition: all ease 0.6s;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+.pacote .padrao h3 {
+    background-image: linear-gradient(to right, rgba(255,170,50,0.9251050762101716) 100%, rgba(248, 128, 24, 0.652) 44%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    color: #fff;
+}
+
+.pacote .basico .custo {
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+    
+}
+
+.pacote .basico .custo .real {
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 400;
+    vertical-align: middle;
+}
+.pacote .basico .custo .preco {
+    font-size: 60px;
+    font-weight: 300;
+    letter-spacing: -2px;
+    line-height: 60px;
+    padding: 0;
+    vertical-align: middle;
+}
+.pacote .basico .custo .centavo {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 400;
+    vertical-align: bottom;
+}
+.pacote .basico .custo .mes {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    line-height: 60px;
+    vertical-align: bottom;
+}
+
+.pacote .basico ul li {
+    border-top: 1px solid #ccc;
+    padding: 18px 0;
+    border-bottom: 1px solid #ccc;
+    color: #103A58;
+}
+
+.pacote .basico ul li i {
+    color: #103A58;
+    padding: 5px;
+}
+
+.pacote .basico .header-botao {
+    margin: 2rem auto;
+    width: 170px;
+
+}
+
+.pacote .basico .header-botao a {
+    font-weight: normal;
+    font-size: 18px;
+    border-radius: 50px;
+    outline: medium none;
+    border: 2px solid rgb(227, 147, 0);
+    color: #1d1d1d;
+}
+
+.pacote .basico:hover .header-botao a {
+    background-image: linear-gradient(to right, rgba(255,170,50,0.9251050762101716) 100%, rgba(248, 128, 24, 0.652) 44%);
+    color: #fff;
+    border: 2px solid rgb(227, 147, 0);
+}
+
+.pacote .basico h3:hover {
+    background-image: linear-gradient(to right, rgba(255,170,50,0.9251050762101716) 100%, rgba(248, 128, 24, 0.652) 44%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    color: #fff;
+}
+
+.pacote .padrao .header-botao a {
+    background-image: linear-gradient(to right, rgba(255,170,50,0.9251050762101716) 100%, rgba(248, 128, 24, 0.652) 44%);
+    color: #fff;
+    border: 2px solid rgb(227, 147, 0);
+}
