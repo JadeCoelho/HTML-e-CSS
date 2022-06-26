@@ -10,14 +10,16 @@
 </head>
 <body>
     <div class="nav">
-        <a href="#" class="logo"><img src="R.png" alt="logo"  style="width: 80px; height: 80px"></a>
+        <a href="#" class="logo">
+            <img src="R.png" alt="logo"  style="width: 70px; height: 70px">
+        </a>
         <div class="navbar-toggler" type="button" id="bar">
             <span class="toggler-icon"></span>
             <span class="toggler-icon"></span>
             <span class="toggler-icon"></span>
         </div>
     
-        <div class="menu-bar">
+        <div class="menu-bar" id="navbar">
             <ul class="menu-itens">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#servico">Serviço</a></li>
@@ -27,7 +29,7 @@
         </div>
     
         <div class="navbar-social">
-            <span>SIGA NOSSAS REDES SOCIAIS</span>
+            <span>REDES SOCIAIS</span>
             <ul>
                 <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -36,25 +38,25 @@
         </div>
     </div>
 
-    <div class="bg" id="home">
+    <div class="bg offset" id="home">
         <div class="overlay"></div>
         <div class="shape">
             <img src="White-Wave-PNG-Image.png" alt="">
         </div>
     </div>
 
-    <div class="texto">
+    <div class="hero-texto">
         <h3>Nós somos uma agência de Marketing Estratégico e Mídias Sociais</h3>
         <p>Um negócio simples focado em landing page para fazer seu projeto se destacar!</p>
         <ul class="header-botao">
-            <li><a href="#" class="botao-principal um">Entrar em contato</a></li>
+            <li><a href="#contato" class="botao-principal um">Entrar em contato</a></li>
             <li><a href="#" class="botao-principal dois">Assista ao nosso vídeo <i class="fa fa-play"></i></a></li>
         </ul>
     </div>
 
 
     <section id="embrulho">
-        <section id="servico" class="servico">
+        <section id="servico" class="servico offset">
             <h3>Desenvolvido para</h3>
             <p>Que você não perca mais tempo e dinheiro construindo um negócio que não traz resultados. <br>Satisfação garantida!</p>
 
@@ -67,7 +69,7 @@
                             </div>
                             <div class="servico-conteudo">
                                 <h4 class="servico-titulo">Provide.me empresas</h4>
-                                <p class="servico-texto">Lorem ipsum dolor sit, amet consectetur elit. <br> Lorem ipsum dolor sit amet.</p>
+                                <p class="servico-texto">Lorem ipsum dolor sit, amet consectetur elit. Lorem ipsum dolor sit amet.</p>
                             </div>
                         </div>
                         <div class="servicos">
@@ -76,10 +78,11 @@
                             </div>
                             <div class="servico-conteudo">
                                 <h4 class="servico-titulo">Provide.me empresas</h4>
-                                <p class="servico-texto">Lorem ipsum dolor sit, amet consectetur elit. <br> Lorem ipsum dolor sit amet.</p>
+                                <p class="servico-texto">Lorem ipsum dolor sit, amet consectetur elit. Lorem ipsum dolor sit amet.</p>
                             </div>
                         </div>
                     </div>
+
                     <div class="caixa1">
                         <div class="servicos">
                             <div class="servico-icone">
@@ -102,15 +105,15 @@
                     </div>
                 </div>
                     
-    
                 <div class="img">
                     <img src="image.png" alt="">
                 </div>
+                
             </div>
         </section>
     </section>
 
-    <section id="pacote" class="pacote">
+    <section id="pacote" class="pacote offset">
         <h3>Nossos pacotes</h3>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, necessitatibus quo quia iure corporis modi expedita impedit possimus, quisquam ipsam ea voluptas sed eligendi quaerat aliquid voluptatum, odit ex ut!</p>
 
@@ -122,8 +125,8 @@
                 <div class="custo">
                     <span class="real">R$</span>
                     <span class="preco">99</span>
-                    <span class="centavo">,99</span>
-                    <span class="mes">/MÊS</span>
+                    <span class="centavo">,99/</span>
+                    <span class="mes">MÊS</span>
                 </div>
                 <ul>
                     <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>Componentes plenamente capacitados</li>
@@ -143,8 +146,8 @@
                 <div class="custo">
                     <span class="real">R$</span>
                     <span class="preco">199</span>
-                    <span class="centavo">,99</span>
-                    <span class="mes">/MÊS</span>
+                    <span class="centavo">,99/</span>
+                    <span class="mes">MÊS</span>
                 </div>
                 <ul>
                     <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>Componentes plenamente capacitados</li>
@@ -160,13 +163,13 @@
 
             <div class="basico">
                 <div class="basico-head">
-                    <h3>ilimitado</h3>
+                    <h3>Ilimitado</h3>
                 </div>
                 <div class="custo">
                     <span class="real">R$</span>
                     <span class="preco">299</span>
-                    <span class="centavo">,99</span>
-                    <span class="mes">/MÊS</span>
+                    <span class="centavo">,99/</span>
+                    <span class="mes">MÊS</span>
                 </div>
                 <ul>
                     <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>Componentes plenamente capacitados</li>
@@ -180,6 +183,105 @@
             </div>
         </div>
     </section>
+
+    <section class="banner">
+        <div class="parallax">
+            <div class="chamar">
+                <h3 class="chamar-titulo">Ficou interessado?</h3>
+                <p class="chamar-texto">Deixe-nos saber mais! Nos conte se há algo que podemos atualizar ou otimizar.</p>
+                <div class="chamar-noticias">
+                    <i class="fa fa-envelope"></i>
+                    <input type="text" name="" id="" placeholder="seuemail@gmail.com">
+                    <button type="submit">Inscrever-se</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contato offset" id="contato">
+        <h3>Fale conosco</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, necessitatibus quo quia iure corporis.</p>
+
+        <div class="form">
+            <div class="linha1">
+                <input type="text" name="" id="" placeholder="Nome">
+                <input type="email" name="" id="" placeholder="Email">
+            </div>
+
+            <div class="linha1">
+                <input type="text" name="" id="" placeholder="Assunto">
+                <input type="tel" name="" id="" placeholder="Celular">
+            </div>
+
+            <textarea placeholder="Mensagem" id="" cols="30" rows="5"></textarea>
+
+            <ul class="header-botao">
+                <a href="#" class="botao-principal dois">Enviar</a>
+            </ul>
+        </div>
+    </section>
+
+    
+    <footer>
+        <div class="linha1">
+            <a href="#" class="logo"><img src="R.png" alt="logo"  style="width: 70px; height: 70px"></a>
+
+            <ul>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="linha-dois">
+            <div class="linha-um">
+                <p class="footer-titulo">Companhia</p>
+                <ul>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Carreira</a></li>
+                </ul>
+            </div>
+
+            <div class="linha-um">
+                <p class="footer-titulo">Produtos & Serviços</p>
+                <ul>
+                    <li><a href="#">Produtos</a></li>
+                    <li><a href="#">Negócios</a></li>
+                    <li><a href="#">Desenvolvimento</a></li>
+                </ul>
+            </div>
+
+            <div class="linha-um">
+                <p class="footer-titulo">Ajuda & Suporte</p>
+                <ul>
+                    <li><a href="#">Central de ajuda</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Termos & condições</a></li>
+                </ul>
+            </div>
+
+            <div class="linha-um">
+                <p class="footer-titulo">Inscreva-se na nossa Newsletter</p>
+                <div class="newsletter">
+                    <input type="text" name="" id="" placeholder="Seu email">
+                    <button type="submit"><i class="fa fa-angle-double-right"></i></button>
+                </div>
+                <p class="footer-texto">Inscreva-se para receber novidades semanalmente e manter-se atualizado. Não enviamos spam.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="creditos">
+        <p>Site desenvolvido por Jade Mattos</p>
+        
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script src="web.js"></script>
+
 </body>
 </html>
