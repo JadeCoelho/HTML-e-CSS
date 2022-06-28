@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slideshow</title>
+    <link rel="stylesheet" href="105.css">
+</head>
+<body>
+    <section class="container">
+        <div class="slide fade">
+            <div class="ordem">1/4</div>
+            <img src="banner-4.jpg" alt="" style="width:100%;">
+            <div class="textoslide">slide 1</div>
+        </div>
+        <div class="slide fade">
+            <div class="ordem">2/4</div>
+            <img src="banner-2.jpg" alt="" style="width:100%;">
+            <div class="textoslide">slide 2</div>
+        </div>
+        <div class="slide fade">
+            <div class="ordem">3/4</div>
+            <img src="banner-3.jpg" alt="" style="width:100%;">
+            <div class="textoslide">slide 3</div>
+        </div>
+        <div class="slide fade">
+            <div class="ordem">4/4</div>
+            <img src="banner-1.jpg" alt="" style="width:100%;">
+            <div class="textoslide">slide 4</div>
+        </div>
+
+        <a class="anterior" onclick="mudarslide(-1)">&lsaquo;</a>
+        <a class="proximo" onclick="mudarslide(1)">&rsaquo;</a>
+    </section>
+
+    <section style="text-align: center;">
+    <span class="indicador" onclick="slideatual(1)"></span>
+    <span class="indicador" onclick="slideatual(2)"></span>
+    <span class="indicador" onclick="slideatual(3)"></span>
+    <span class="indicador" onclick="slideatual(4)"></span>
+    </section>
+
+    <script src="105.js"></script>
+</body>
+</html>
