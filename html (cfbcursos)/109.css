@@ -1,0 +1,166 @@
+.containerimg {
+    margin: 10px;
+    position: relative;
+    width: 50%;
+}
+
+.containerimg img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.sobreposicao {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: blue;
+    overflow: hidden;
+    transition: .4s ease;
+}
+
+.sobreposicao:hover {
+    opacity: .5;
+}
+
+.textoimg {
+    color: white;
+    font-style: 18px;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+}
+
+.textoimg a {
+    text-decoration: none;
+    color:white;
+}
+
+.textoimg a:hover {
+    color: black;
+}
+
+.filtros img {
+    width: 500px;
+    margin: 15px;
+}
+
+.f1 {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+.f2 {
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+.f3 {
+    filter: brightness(200%);
+    -webkit-filter: brightness(200%);
+}
+
+.f4 {
+    filter: contrast(200%);
+    -webkit-filter: contrast(200%);
+}
+
+.f5 {
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.638));
+    -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.638));
+}
+
+.f6 {
+    filter: hue-rotate(90deg);
+    -webkit-filter: hue-rotate(90deg);
+}
+
+.f7 {
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+}
+
+.f8 {
+    filter: opacity(30%);
+    -webkit-filter:  opacity(30%);
+}
+
+.f9 {
+    filter: saturate(200%);
+    -webkit-filter:  saturate(200%);
+}
+
+.f10 {
+    filter: sepia(90%);
+    -webkit-filter: sepia(90%);
+}
+
+.f11 {
+    filter: contrast(200%) brightness(150%);
+    -webkit-filter: contrast(200%) brightness(150%);
+}
+
+.fototextos {
+    width: 400px;
+    margin: auto;
+    position: relative;
+    color: white;
+    border: 1px solid white;
+}
+
+.fototextos img {
+    width: 100%;
+  
+}
+
+.baixoesquerda {
+    position: absolute;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.474);
+    padding: 10px;
+    bottom: 0;
+    left: 0;
+}
+
+.topoesquerda {
+    position: absolute;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.474);
+    padding: 10px;
+    top: 0;
+    left: 0;
+}
+
+.baixodireita {
+    position: absolute;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.474);
+    padding: 10px;
+    bottom: 0;
+    right: 0;
+}
+
+.topodireita {
+    position: absolute;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.474);
+    padding: 10px;
+    top: 0;
+    right: 0;
+}
+
+.centro {
+    position: absolute;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.474);
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

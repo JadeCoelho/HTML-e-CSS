@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.galeria {
+    display: inline-block;
+    border: 1px solid black;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.galeria img {
+    opacity: .6;
+    cursor: pointer;
+    width: 200px;
+    height: 100px;
+    margin: 5px;
+    margin-right: 0;
+}
+
+.galeria img:hover {
+    opacity: 1;
+}
+
+.container {
+    position: relative;
+    display: none;
+    width: 60%;
+    margin: auto;
+}
+
+.container img {
+    width: 100%;
+}
+
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
