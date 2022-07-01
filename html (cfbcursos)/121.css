@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: arial sans-serif;
+    font-size: 17px;
+}
+
+
+#video {
+    position: fixed;
+    right: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.conteudo {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0,0,0,0.3);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+#pausa {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+#pausa:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+
