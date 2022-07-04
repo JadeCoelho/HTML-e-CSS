@@ -1,0 +1,159 @@
+.um .cfb::before {
+    content: "cfb - ";
+    color: red;
+    font-size: 20px;
+}
+
+.um .cfb::after {
+    content: url(icons8-lançar-foguete-64.png);
+}
+
+.um p::first-letter {
+    text-transform: uppercase;
+    color: blue;
+}
+
+.um p::first-line {
+    text-decoration: underline;
+}
+
+::selection {
+    background-color: antiquewhite;
+}
+
+::-moz-selection {
+    background-color: antiquewhite;
+}
+
+
+.um h3 {
+    width: 400px;
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: justify;
+    transition: all 1s;
+    transition-timing-function: cubic-bezier(0.5,0,0.5,1);
+    margin-bottom: 200px;
+}
+
+.um h3:hover {
+    width: 500px;
+    height: 120px;
+    background-color: red;
+    color: white;
+}
+
+
+.um h4 {
+    width: 400px;
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: justify;
+    transition: all 1s linear, transform .5s;
+    transition-delay: 1s;
+}
+
+.um h4:hover {
+    background-color: red;
+    color: white;
+    transform: rotate(180deg);
+}
+
+@keyframes anima {
+    0% {
+        left: 0;
+        top: 0;
+    }
+
+    25% {
+        background-color: aquamarine;
+    }
+
+    50% {
+        background-color: #fff;
+    }
+
+    100% {
+        left: 500px;
+        top: 500px;
+    }
+}
+
+@keyframes anima1 {
+    from {
+        left: 0;
+        top: 0;
+    }
+
+    to {
+        left: 500px;
+        top: 500px;
+    }
+}
+
+@keyframes anima2 {
+    from {
+        background-color: aquamarine;
+    }
+
+    to {
+        background-color: #fff;
+    }
+}
+
+
+
+.outro p {
+    position: relative;
+    left: 500px;
+    top: 500px;
+    width: 260px;
+    height: 260px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: justify;
+    animation-name: anima2, anima1;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s,2s;
+}
+
+.outro2 p {
+    background-color: aquamarine;
+    position: relative;
+    left: 500px;
+    top: 500px;
+    width: 260px;
+    height: 260px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: justify;
+    animation-name: anima2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+}
+
+.outro3 p {
+    background-color: aquamarine;
+    position: relative;
+    left: 500px;
+    top: 500px;
+    width: 260px;
+    height: 260px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: justify;
+    animation-name: anima;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+    /*animation-play-state: paused;*/
+}

@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap');
+
+body {
+    font-family: 'News Cycle', sans-serif;
+}
+
+#tela {
+    position: relative;
+    display: block;
+    width: 340px;
+    height: 650px;
+    border: 10px solid black;
+    border-radius: 25px;
+    background-image: url(photo1656958156.jpeg);
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+}
+
+.topo {
+    display: flex;
+    margin-bottom: 30%;
+}
+
+.topo .wifi {
+    font-size: 18px;
+}
+
+.topo-direito i {
+    font-size: 12px;
+}
+
+.fa-battery-full {
+    transform: rotate(-90deg);
+}
+
+
+.topo .topo-esquerdo {
+    display: flex;
+    float: left;
+    color: white;
+    margin: 10px 15px;
+}
+
+.topo .topo-direito {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    margin: 10px 10px;
+    right: 10px;
+}
+
+.icone-topo {
+    color: white;
+    margin-left: 5px;
+}
+
+.barra {
+    display: block;
+    margin: auto;
+    background-color: rgba(83, 83, 83, 0.922);
+    border-radius: 25px;
+    border: none;
+    width: 90%;
+    height: 40px;
+    margin-bottom: 18%;
+
+}
+
+.barra-itens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barra input, .icone-barra-esquerdo {
+    top: 24.4%;
+}
+
+.icone-barra-direito {
+    top: 24.1%;
+}
+
+.barra input {
+    width: 50%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    position: absolute;
+    font-size: 16px;
+    color: white;
+    font-weight: lighter;
+}
+
+.icone-barra-esquerdo {
+    position: absolute;
+    left: 30px;
+}
+
+.icone-barra-direito {
+    position: absolute;
+    right: 35px;
+}
+
+.icone-barra-direito img {
+    margin-left: 15px;
+}
+
+.icone-barra-esquerdo {
+    width: 20px;
+    filter: saturate(300%);
+}
+
+.mic{
+    width: 15px;
+    filter: saturate(250%);
+}
+
+.camera {
+    width: 22px;
+    filter: saturate(250%);
+    
+}
+
+.local {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.temperatura {
+    display: inline;
+    color: white;
+    font-weight: lighter;
+}
+
+.local ion-icon {
+    color: white;
+}
+
+.lugar{
+    font-weight: 700;
+    margin-top: -25px;
+    margin-bottom: -3px;
+    letter-spacing: 1.1px;
+}
+
+.hora {
+    font-size: 15px;
+}
+
+#tela .apps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 28%;
+}
+
+.apps ion-icon {
+    font-size: 25px;
+    color: white;
+    width: 36px;
+    height: 40px;
+    padding: 8px 12px;
+    border-radius: 25px;
+    filter: saturate(150%);
+}
+
+.tel {
+    background-color: #00a55d;
+    margin-right: 30%;
+}
+
+
+.foto {
+    background-color: rgb(255, 0, 68);
+}
+
+.solo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 32%;
+}
+
+.solo ion-icon {
+    color: white;
+    font-size: 20px;
+}
+
+.solo .meio {
+    margin: 0 20%;
+}
+
+.solo i {
+    font-size: 16px ;
+    color: white;
+    transform: rotate(90deg);
+}

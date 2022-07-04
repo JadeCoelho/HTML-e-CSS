@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    list-style: none;
+}
+*::selection {
+    background: var(--principal);
+    color: var(--claro);
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg);
+    height: 3000px;
+}
+
+:root {
+    --principal:rgb(56, 202, 146);
+    --secundaria:rgb(6, 48, 35);
+    --claro: #fff;
+    --bg: rgb(236, 236, 236);
+}
+
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+header {
+    width: 96%;
+    background: var(--claro);
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z-index: 1000;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+}
+
+.navbar ul li a {
+    font-size: 2rem;
+    color: var(--principal);
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: .2s;
+}
+
+.navbar ul li a:hover {
+    color: var(--secundaria);
+}
+.navbar ul li .active {
+    color: var(--secundaria);
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--secundaria);
+}
+
+.logo i {
+    margin-right: 10px;
+}
+
+
+header .fa-bars {
+    font-size: 3rem;
+    color: var(--principal);
+    cursor: pointer;
+    display: none;
+    transition: .2s;
+}
+
+header .fa-times {
+    transform: rotate(180deg);
+    color: var(--secundaria);
+}
+
+@media (max-width:768px) {
+    html {
+        font-size: 55%;
+    }
+
+    header .fa-bars {
+        display: block;
+    }
+
+    header .navbar {
+        position: fixed;
+        top: -100rem;
+        left: 0;
+        width: 100%;
+        background: var(--claro);
+        border-radius: 1rem;
+        opacity: 0;
+        transition: .2s linear;
+    }
+
+    .navbar ul {
+        flex-flow: column;
+        padding: 2rem 0;
+    }
+
+    .navbar ul li {
+        margin: 1rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar ul li a {
+        font-size: 3rem;
+        display: block;
+    }
+
+    header .nav-toggle {
+        top: 5.5rem;
+        opacity: 1;
+    }
+}
