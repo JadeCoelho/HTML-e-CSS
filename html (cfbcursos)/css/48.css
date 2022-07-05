@@ -1,0 +1,27 @@
+
+
+body {
+    background-color: azure;
+}
+
+@media screen and (min-width:0px) and (max-width:400px) and (orientation:portrait) { /*boolean (true ou false). Media screen, print, speech, all*/
+    body {
+        background-color: antiquewhite;
+    }
+}
+
+@media screen and (min-width:401px) and (max-width:800px) { 
+    body {
+        background-color: rgb(67, 77, 67);
+    }
+}
+
+@media screen and (min-width:801px) and (max-width:1200px) { 
+    body {
+        background-color: burlywood;
+    }
+}
+
+/*acho que é melhor trabalhar com tamanhos mínimos pra cada tamanho de tela */
+
+/*orientation: portrait (retrato = largura menor que altura) ou landscape (paisagem = largura maior que altura)*/ 
