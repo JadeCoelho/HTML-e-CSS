@@ -1,0 +1,28 @@
+.item {
+    margin: 5px;
+    padding: 5px;
+    background: #447;
+    text-align: center;
+    font-size: 1em;
+    color: #fff;
+}
+
+.container {
+    margin: 0 auto;
+    border: 1px solid #000;
+    max-width: 500px;
+    /*flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;*/
+    flex-flow: row-reverse wrap-reverse;
+    /*flex flow junta flex direction com flex wrap em uma só. */
+
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+}
+
+.flexivel {
+    display: flex;
+}
