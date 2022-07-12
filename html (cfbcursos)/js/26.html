@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1 class="titulo">cursos</h1>
+    <h3>curso de js</h3>
+    <p>curso de html</p>
+    <p class="titulo">curso de css</p>
+    <p>curso de framework</p>
+    <p>curso de edição</p>
+
+    <hr>
+
+    <h1 class="titulo">aleatório</h1>
+    <div class="caixa">
+      <h2>oiii</h2>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, minus!</p>
+      <p>Lorem ipsum, dolor sit amet consectetus!</p>
+    </div>
+    <hr>
+    <div>
+      <h2>oiii</h2>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, minus!</p>
+      <p>Lorem ipsum, dolor sit amet consectetus!</p>
+    </div>
+    <hr>
+    <script>
+     var ps = document.querySelectorAll('p')
+    ps[0].style.color='green'
+
+    var titulos = document.querySelectorAll('.titulos')
+      for (var i=0;i<titulos.length;i++){
+        document.write(titulos[i].innerHTML+'<br>')
+      }
+
+      var div = document.querySelectorAll('div.caixa > *, h2')
+      for (var i=0;i<div.length;i++){
+        div[i].style.color='green'
+      }
+    </script>
+</body>
+</html>
