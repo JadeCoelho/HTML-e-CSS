@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #dv1{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body onload="ola()">
+
+    <div id="dv1" onmouseover="mudacor(this,'gray')" onmouseout="mudacor(this,'white')"></div>
+        <br>
+        <button onclick="mudapos(this)" onmousemove="mudacor(document.getElementById('dv1'),'blue')">Clique em mim</button>
+
+
+
+    <script>
+        function mudacor(obj,cor){
+            obj.style.backgroundColor=cor
+        }
+
+        function mudapos(obj){
+            obj.style.position='absolute'
+            obj.style.left=Math.random()*500 + 'px'
+            obj.style.top=Math.random()*500 + 'px'
+        }
+
+        function ola(){
+            var data = new Date()
+            var hora = data.getHours()
+            var txt
+            if (hora > 4 && hora < 12) {
+                txt = 'BOM DIA!'
+            } else if (hora >= 12 && hora < 18) {
+                txt = 'BOA TARDE!'
+            } else if (hora >= 18 && hora < 1){
+                txt = 'BOA NOITE!'
+            } else if (hora >= 1 && hora <= 4) {
+                txt = 'BOA MADRUGADA!'
+            }
+
+            alert('OLÁ! ' + txt)
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+  
+    <script>
+    
+        var data = new Date()
+        var dia = data.getDate()
+        var diasemana = data.getDay()
+        var mes = data.getMonth()
+        var ano = data.getFullYear()
+        var hora = data.getHours()
+        var minuto = data.getMinutes()
+        var segundo = data.getSeconds()
+        
+        var meses = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez', ]
+        var semana = ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sáb']
+
+        document.write('data: ' + data)
+        document.write('<br>')
+        document.write('dia: ' + dia)
+        document.write('<br>')
+        document.write('dia da semana: ' + diasemana + ' (domingo começando no índice 0)')
+        document.write('<br>')
+        document.write('mês: ' + mes + ' (janeiro começando no índice 0)')
+        document.write('<br>')
+        document.write('ano: ' + ano)
+        document.write('<br>')
+        document.write('hora: ' + hora)
+        document.write('<br>')
+        document.write('minuto: ' + minuto)
+        document.write('<br>')
+        document.write('segundo: ' + segundo)
+        document.write('<br>')
+
+        document.write(semana[diasemana] + ', ' + dia + ' de ' + meses[mes] + ' de ' + ano)
+        document.write('<br>')
+
+        var ndt = new Date()
+        ndt.setDate(data.getDate() + 3)
+        document.write(ndt)
+        document.write('<br>')
+        
+
+    </script>
+    
+</body>
+</html>

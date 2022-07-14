@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label {
+            display: block;
+        }
+        input {
+            display: block;
+        }
+        input[type="submit"], label {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" name="form1" id="form1">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" placeholder="1" value="1">
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" id="senha" placeholder="1" value="123">
+        <input type="submit" value="Enviar">
+    </form>
+
+    <hr>
+    <form action="" name="form2" id="form2">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" placeholder="2" value="2">
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" id="senha" placeholder="2" value="231">
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <script>
+        var form = document.forms.length
+        document.write(form)
+
+        document.write('<br>')
+
+        var fm = document.forms[0].id  
+        document.write(fm)
+ // ou var fm = document.forms.item(0).id   document.write(fm)   ou var fm = document.forms.namedItem('form1').id   document.write(fm)  // 
+
+       var itens = document.forms.namedItem('form2').innerHTML   
+       document.write(itens)
+
+       document.write('<hr>')
+
+       var elemento = document.forms['form1'].elements[1].value
+       document.write(elemento)
+        
+       var f = document.forms[0]
+       var el = f.elements
+
+       for (var i=0;i<el.length-1;i++) {
+       el[i].style.backgroundColor='#aaa'
+       el[i].value='cfb cursos'
+       }
+       document.write(f)
+
+       document.write('<hr>')
+       document.write(document.getElementById('form1').elements[0].value)
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+  
+    <script>
+        nomecor = 'vermelho'
+        nomefruta = 'laranja'
+        nomeanimal = 'baleia'
+
+        function cor(){
+            var nomecor = 'azul'
+            document.write(nomecor + '<br>')
+        }
+
+        cor()
+
+        document.write(nomecor + '<br>')
+
+        function fruta(){
+            nomefruta = 'banana' //nesse caso eu nao to criando uma outra variável de mesmo nome, e sim alterando o valor da variável já declarada, pois não usei "var". De qualquer forma, o ideal é usar variáveis com nomes diferentes!//
+            document.write(nomefruta + '<br>')
+        }
+
+        fruta()
+
+        document.write(nomefruta + '<br>')
+
+        function animal(){
+            var nomeanimal = 'lontra'
+            document.write(this.nomeanimal + '<br>' + nomeanimal)
+        }
+
+        animal()
+
+        //document.write(nomeanimal + '<br>')
+
+        
+    </script>
+    
+</body>
+</html>

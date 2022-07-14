@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+  
+    <script>
+        teste()
+        function teste(){
+            document.write('curso de js - cfb cursos')
+        }
+
+        document.write('<br>')
+
+        function soma(n1,n2) {
+            var res = n1 + n2
+            document.write(res)
+        }
+
+        document.write('<br>')
+
+        soma(2,3)
+
+        document.write('<br>')
+
+        soma(10,20)
+
+        document.write('<br>')
+
+        soma(50,30)
+
+        document.write('<br>')
+
+        function somando(n1,n2){
+            return n1 + n2
+        }
+
+        document.write(somando(5,15))
+
+        document.write('<br>')
+
+        var ns = [10,2,5,29,30,50,40]
+        function media(nums){
+            var tam = nums.length
+            var soma = 0
+            for (var i=0;i<tam;i++){
+                soma+=nums[i]
+            }
+            return Math.round(soma/tam)
+        }
+        
+        document.write('média arredondada: ' + media(ns))
+    </script>
+    
+</body>
+</html>
