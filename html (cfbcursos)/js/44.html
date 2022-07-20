@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #slider {
+            width: 1000px;
+            height: 300px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .bt{
+            background-color: rgba(0, 0, 0, 0.399);
+            height: 30%;
+            color: white;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            margin: 10px;
+        }
+
+        #bordaload{
+            width: 100%;
+            height: 5px;
+            margin-top: 25%;
+            border: 1px solid rgba(255, 255, 255, 0.353);
+            ;
+        }
+
+        #barra {
+            width: 0%;
+            height: 100%;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="slider">
+        <button class="bt" onclick="trocaimg(-1)"> &lt;</button>
+        <div id="bordaload">
+            <div id="barra" ></div>
+        </div>
+        <button class="bt" onclick="trocaimg(1)">&gt;</button>
+    </div>
+    <script>
+        var imgs = []
+        var slider
+        var imgatual
+        var maximg
+        var temp
+        var vtempo
+        var vbarra = document.getElementById('barra')
+        var tempotroca
+
+        function preCarregamento() {
+            var s = 1
+            for (var i = 0; i < 5; i++) {
+                imgs[i] = new Image()
+                imgs[i].src = "imgs/s"+s+".jpg"
+                s++
+            }
+            
+        }
+
+        function carregar(img){
+            slider.style.backgroundImage = "url('"+imgs[img].src+"')"
+        }
+
+        function iniciar(){
+            preCarregamento()
+            imgatual = 0
+            maximg = imgs.length-1
+            slider = document.getElementById('slider')
+            carregar(imgatual)
+            tempotroca=0
+            anima()
+            
+        }
+
+        function trocaimg(dir) {
+            tempotroca = 0
+            imgatual+=dir
+            if (imgatual > maximg){
+                imgatual = 0
+            } else if (imgatual < 0) {
+                imgatual = maximg
+
+            }
+            carregar(imgatual)
+        }
+
+        function anima(){
+            tempotroca++
+            if (tempotroca >= 500){
+                tempotroca = 0
+                trocaimg(1)
+            }
+
+            vtempo = tempotroca/5 // é 5 pq tem q ter a relação de 100(%), e o valor colocado foi 500
+            vbarra.style.width=vtempo+"%"
+
+            window.requestAnimationFrame(anima)
+        }
+
+        window.addEventListener("load", iniciar)
+    </script>
+</body>
+</html>

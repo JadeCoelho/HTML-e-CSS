@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <h3>Home - aula 67</h3>
+    <a href="" id="info"></a>
+
+    <a href="67.html">Home</a>
+    <a href="671.html">67.1</a>
+    <a href="672.html">67.2</a>
+    <hr>
+    <button id="btnback">Voltar</button>
+    <button id="btnforward">Avançar</button>
+    <button id="btnback2">Voltar 2</button>
+    <script>
+
+        var painel,btnb,btnf,btng
+
+        function hb(){
+            window.history.back()
+        }
+
+        function hf(){
+            window.history.forward()
+        }
+        function hg(){
+            window.history.go(-2)
+        }
+         function inicia(){
+            btnb = document.getElementById('btnback')
+            btnf = document.getElementById('btnforward')
+            btng = document.getElementById('btnback2')
+
+            btnb.addEventListener("click",hb)
+            btnf.addEventListener("click",hf)
+            btng.addEventListener("click",hg)
+            painel = document.getElementById('info')
+            painel.innerHTML=history.length
+         }
+         window.addEventListener("load",inicia)
+    </script>
+</body>
+</html>

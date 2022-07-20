@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #painel {
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 15px;
+            width: 150px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="">Tamanho</button>
+    <div id="painel"></div>
+    <script>
+        var l,a,px,py,painel
+
+        
+
+        l = window.innerWidth
+        a = window.innerHeight
+
+       
+
+        function inicia(){
+            l = window.innerWidth
+            a = window.innerHeight
+            px = window.screenX
+            py = window.screenY
+            var painel = document.getElementById('painel') 
+             painel.innerHTML = "L: "+l+" - A: "+a+"<br> X: "+px+" - Y: "+py
+        }
+        window.addEventListener("load",inicia)
+
+         
+    </script>
+</body>
+</html>

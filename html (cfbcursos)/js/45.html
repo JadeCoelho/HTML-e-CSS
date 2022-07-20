@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #fundo{
+            width: 200px;
+            height: 379px;
+        }
+        .s1{
+            background-image: url("imgs/s1.jpg");
+        }
+        .s2{
+            background-image: url("imgs/s2.jpg");
+        }
+        .s3{
+            background-image: url("imgs/s3.jpg");
+        }
+    </style>
+</head>
+<body>
+    <button onclick="troca(1)">fundo 1</button>
+    <button onclick="troca(2)">fundo 2</button>
+    <button onclick="troca(3)">fundo 3</button>
+    <button onclick="remove()">remover fundo</button>
+    <button onclick="verifica()">verifica</button>
+    <div id="fundo"></div>
+
+    <script>
+        function troca(f){
+            var obj = document.getElementById('fundo')
+            if (f == 1){
+                obj.setAttribute("class","s1")
+            } else if (f == 2){
+                obj.setAttribute("class","s2")
+            } else if (f == 3){
+                obj.setAttribute("class","s3")
+            }
+        }
+
+        function remove(){
+        var obj = document.getElementById("fundo")
+        obj.removeAttribute("class")
+        }
+
+        function verifica(){
+            var obj = document.getElementById("fundo")
+           if (obj.hasAttribute("class")){
+            alert('atributo "class" presente')
+           } else {
+            alert('sem atributo "class"')
+           }
+        }
+        //document.getElementById('fundo').setAttribute("class","s1")
+    </script>
+</body>
+</html>

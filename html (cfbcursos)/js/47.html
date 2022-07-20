@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <p id="txt">CFB cursos - Curso de Javascript - aula 47 do curso de javascript</p>
+    <script>
+        var texto = document.getElementById('txt').innerHTML
+        var texto2 = " Curso de Javascript - aula 47 do curso de javascript"
+        //var res = texto.search(/javascript/i); acha e indica a posição do elemento buscado
+        // var res = texto.replace(/javascript/ig,"html"); substitui a palavra buscada por outra
+        //var res = texto.charAt(11); retorna o que está contido na posição buscada
+        //var res = texto.charCodeAt(11); retorna o código do que está contido na posição buscada (no exemplo queremos o código do "-")
+        var res = texto.charCodeAt(0)
+        var res2 = texto.concat(texto2 + " | teste") 
+
+        document.write(res + "<br>")
+        document.write(String.fromCharCode(67)  + "<br>") //fromchardcode faz o contrário do charcode, retornando o caractere do código buscado
+
+        document.write(res2)
+
+    </script>
+</body>
+</html>

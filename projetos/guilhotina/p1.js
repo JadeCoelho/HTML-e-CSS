@@ -85,43 +85,43 @@ const palavras = [
         nome: 'RAPOSA',
         categoria: 'ANIMAL'
     },
-    palavra21 = {
+    palavra021 = {
         nome:'BEXIGA',
         categoria:'PARTE DO CORPO HUMANO'
     },
-    palavra22 = {
+    palavra022 = {
         nome:'EPIGLOTE',
         categoria:'PARTE DO CORPO HUMANO'
     },
-    palavra23 = {
+    palavra023 = {
         nome:'FALANGE',
         categoria:'PARTE DO CORPO HUMANO'
     },
-    palavra24 = {
+    palavra024 = {
         nome:'GENGIVA',
         categoria:'PARTE DO CORPO HUMANO'
     },
-    palavra25 = {
+    palavra025 = {
         nome:'INTESTINO',
         categoria:'PARTE DO CORPO HUMANO'
     },
-    palavra26 = {
+    palavra026 = {
         nome:'NADEGA',
         categoria:'PARTE DO CORPO HUMANO'
     },
-    palavra27 = {
+    palavra027 = {
         nome:'OMBROS',
         categoria:'PARTE DO CORPO HUMANO'
     },
-    palavra28 = {
+    palavra028 = {
         nome:'PUPILA',
         categoria:'PARTE DO CORPO HUMANO'
     },
-     palavra29 = {
+     palavra029 = {
         nome:'TRAQUEIA',
         categoria:'PARTE DO CORPO HUMANO'
     },
-    palavra30 = {
+    palavra030 = {
         nome:'UMBIGO',
         categoria:'PARTE DO CORPO HUMANO'
     }
@@ -178,7 +178,7 @@ function mudarletra(tecla){
 function comparalista(letra) {
     const pos = sorteionome.indexOf(letra)
     if (pos < 0) {
-        tentativas --
+        tentativas--
         carregaimagem()
         //verificar se ainda há tentativas
     } else {
@@ -203,25 +203,26 @@ function comparalista(letra) {
         function carregaimagem() {
             switch(tentativas){
                 case 5:
-                    document.getElementById('imagem').style.background = "url('img2.png')";
+                    document.getElementById('imagem').style.background = "url(img2.png)";
                 break;
                 case 4:
-                        document.getElementById('imagem').style.background = 'url(`img3.png`)';
+                        document.getElementById('imagem').style.background = 'url(img3.png)';
                 break;
                 case 3:
-                            document.getElementById('imagem').style.background = 'url(`img4.png`)';
+                            document.getElementById('imagem').style.background = 'url(img4.png`';
                 break;
                 case 2:
-                document.getElementById('imagem').style.background = 'url(`img5.png`)';
+                document.getElementById('imagem').style.background = 'url(img5.png)';
                 break;
                 case 1:
-                    document.getElementById('imagem').style.background = 'url(`img6.png`)';
+                    document.getElementById('imagem').style.background = 'url(img6.png)';
                 break;
                 case 0:
-                    document.getElementById('imagem').style.background = 'url(`img7.png`)';
+                    document.getElementById('imagem').style.background = 'url(img7.png)';
                 break;
                 default:
-                    document.getElementById('imagem').style.background = 'url(`img1.png`)';
+                    document.getElementById('imagem').style.background = 'url(img1.png)';
+                    break;
 
 
             }

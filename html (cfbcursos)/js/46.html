@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <p id="txt">cfb cursos - Curso de Javascript - aula 46 do curso de javascript</p>
+    <script>
+        var texto = document.getElementById('txt').innerHTML
+       // var res = texto.match(/Javascript/ig);
+       // var res = texto.match(/[^oa]/ig); // o "^" indica que eu quero encontrar todas as ocorrencias, exceto as de "o" e "a"
+       // var res = texto.match(/[a-g]/ig) // o "-" indica que eu quero todas as ocorrencias entre as letras "a" e "g" (do alfabeto)
+       // var res = texto.match(/[\d]/ig) \d indica que eu só quero ocorrencia de números (\D = tudo, exceto números)
+       var res = texto.match(/[\w]/ig) // \w pesquisa todos os caracteres de letras e números desconsiderando espaços, tracos...
+        document.write(res + " : " + res.length + "<br>")
+        document.write(res[1])
+    </script>
+</body>
+</html>

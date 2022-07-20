@@ -6,13 +6,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
-    </style>
+        div {
+           width: 50px;
+           height: 50px;
+           position: absolute;
+           background-color: #00f;
+           top: 0px;
+           left: 0px;
+       }
+   </style>
 </head>
 <body>
+   <div id="jogador"></div>
+   <button id="vai">VAI</button>
+   <button id="para">PARA</button>
     
     <script>
+         var jog 
+        var vel
+        var eixox
+        var eixoy
+        var posx
+        var posy
+        var anima
+        var estado
+
+        function game(){
+            posx+= (eixox * vel)
+            //posy+= (eixoy * vel)
+            jog.style.left = posx + "px"
+           // jog.style.top = posy + "px"
+           anima = requestAnimationFrame(game)
+
+           if (posx > 800){
+                eixox += -1
+            } else if (posx < 0){
+                eixox += 1
+            }
+
+        }
+
+        function inicia(){
+            vel = 3
+            eixox = 1
+            eixoy = 0
+            posx = 0
+            posy = 0
+            estado = 1 // 1 movendo, 0 parado
+            vai
+            para
+
+            vai = document.getElementById('vai')
+            para = document.getElementById('para')
+
+            vai.addEventListener("click",mover)
+            para.addEventListener("click",parar)
+         
+            jog = document.getElementById("jogador")
+            jog.addEventListener("click",moverparar)
+            game()
+            
         
+        }
+
+        function mover(){
+            if (!estado){
+                estado=1
+                anima = requestAnimationFrame(game)
+            }
+
+        }
+
+        function parar(){
+                estado=0
+                cancelAnimationFrame(anima)
+
+        }
+
+        function moverparar(){
+            if (estado){
+                estado = 0
+                cancelAnimationFrame(anima)
+            } else{
+                estado = 1
+                anima = requestAnimationFrame(game)
+            }
+            
+        }
+
+        window.addEventListener("load",inicia)
     </script>
 </body>
 </html>

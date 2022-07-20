@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            background-color: #aaa;
+        }
+        #painel {
+            display: flex;
+            height: 50px;
+            align-items: center;
+        }
+        .item {
+            margin: 5px;
+        }
+        #jogo {
+            width: 960px;
+            height: 500px;
+            border: 1px solid black;
+            background-color: #000;
+        }
+        #bola {
+            position: absolute;
+            top: 240px;
+            left: 475px;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+        .barra {
+            position: absolute;
+            width: 20px;
+            height: 140px;
+            background-color: #888;
+            top: 180px
+        }
+        .esquerda {
+            left: 10px;
+        }
+        .direita {
+            left: 930px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="jogo">
+        <div id="bola"></div>
+        <div id="jogador" class="barra esquerda"></div>
+        <div id="cpu" class="barra direita"></div>
+    </div>
+
+    <div id="painel">
+        <div class="item"></div>
+        <label for="">Pontos</label>
+        <input type="text" id="txtpontos" value="0" size="10">
+
+        <div class="item">
+            <button id="btn">Iniciar</button>
+        </div>
+    </div>
+
+    
+    <script>
+        //elementos
+        var vbtn
+        var vbola
+        var vcpu
+        var vjogador
+        var vpainel
+
+        //controles de animação
+        var game, frames
+
+        //posições
+        var posbolax
+        var posbolay
+        var posjogadorx
+        var posjogadory
+        var poscpux
+        var poscpuy
+
+        //direção por teclas
+        var dirjy
+
+        //posições iniciais
+        var posjoginiy = 180
+        var posjoginix = 10
+        var poscpuiniy = 180
+        var poscpuinix = 930
+        var posbolainix = 475
+        var posbolainiy = 240
+
+        //tamanhos
+        var campox = 0
+        var campoy = 0
+        var campow = 960
+        var campoh = 500
+        var barraw = 20
+        var barrah = 140
+        var bolaw = 20
+        var bolah = 20
+
+        //direção
+        var bolax, bolay
+        var cpuy = 0
+
+        //velocidade
+        var velbola, velcpu, veljog
+
+        //controle
+        var pontos = 0
+        var tecla
+        var jogo = false
+        
+
+        function controlecpu(){
+            if(jogo){
+                if((posbolax > (campow/2))&&(bolax >0)){ 
+                    //movimentar cpu
+                    if(((posbolay+(bolah/2))>((poscpuy+(barrah/2)))+velcpu)){
+                        //mover p baixo
+                        if ((poscpuy+barrah)<=campoh){
+                            poscpuy+=velcpu
+                        } else if ((posbolay+(bolah/2))<(poscpuy+(barrah/2))-velcpu){
+                        
+                        if  (poscpuy>= 0){
+                            //mover p cima
+                            poscpuy-=velcpu
+
+                         }
+                        }
+                    } else {
+                    //posicionar cpu no centro
+                    if ((poscpuy+(barrah/2))<(campoh/2)){
+                            poscpuy+=velcpu
+                        } else if ((poscpuy+(barrah/2))>(campoh/2)){
+                            poscpuy-=velcpu
+                    }
+                    }
+                vcpu.style.top=poscpuy+"px"
+            }
+        }
+    }
+
+        function controlejog(){
+            if (jogo){
+                posjogadory += veljog*dirjy
+                if (((posjogadory+barrah)>=campoh)||((posjogadory)<=0)){
+                    posjogadory += (veljog*dirjy)*(-1)
+                }
+                vjogador.style.top = posjogadory+"px"
+            }
+        }
+
+        function controlebola(){
+            posbolax+=velbola*bolax
+            posbolay+=velbola*bolay
+
+            if(
+                (posbolax <= posjogadorx+barraw)&&
+                ((posbolay+bolah >= posjogadory)&&(posbolay <= posjogadory + barrah))
+            ){
+                
+                bolay=(((posbolay+(bolah/2))-(posjogadory+(barrah/2)))/16)
+                bolax*=-1
+            }
+
+            if(
+                (posbolax >= poscpux-barraw)&&
+                ((posbolay+bolah >= poscpuy)&&(posbolay <= poscpuy + barrah))
+            ){
+                bolay=(((posbolay+(bolah/2))-(poscpuy+(barrah/2)))/16)
+                bolax*=-1
+            }
+
+
+            if ((posbolay >= 480) || (posbolay <= 0)){
+                bolay *=-1
+            }
+
+            if (posbolax >=(campow-bolaw)){
+                velbola = 0
+                posbolax = posbolainix
+                posbolay = posbolainiy
+                posjogadory = posjoginiy
+                poscpuy = poscpuiniy
+                pontos++
+                vpainel.value=pontos
+                jogo=false
+                vjogador.style.top = posjogadory+"px"
+                vcpu.style.top = poscpuy+"px"
+            } else if (posbolax <=0){
+                velbola = 0
+                posbolax = posbolainix
+                posbolay = posbolainiy
+                posjogadory = posjoginiy
+                poscpuy = poscpuiniy
+                pontos--
+                vpainel.value=pontos
+                jogo=false
+                vjogador.style.top = posjogadory+"px"
+                vcpu.style.top = poscpuy+"px"
+            }
+            vbola.style.top = posbolay + "px"
+            vbola.style.left = posbolax + "px"
+
+
+        }
+
+        function tecladw() {
+            tecla = event.key
+            if (tecla === "ArrowUp"){
+                dirjy =-1
+            } else if (tecla === "ArrowDown"){
+                dirjy =+1
+            } 
+        }
+
+        function teclaup() {
+            tecla = event.key
+            if (tecla === "ArrowUp"){
+                dirjy =0
+            } else if (tecla === "ArrowDown"){
+                dirjy =0
+            } 
+        }
+
+        function game(){
+            if (jogo){
+                controlejog()
+                controlebola()
+                controlecpu()
+            }
+            frames = requestAnimationFrame(game)
+        }
+
+
+        function startjogo(){
+                if (!jogo){
+                velbola = velcpu = veljog = 8
+                cancelAnimationFrame(frames) //se n, ficaria uma chamada em cima da outra
+                jogo = true
+                dirjy = 0
+                bolay = 0
+                if ((Math.random()*10)<5){
+                    bolax = -1
+                } else {
+                    bolax = 1
+                }
+                posbolax = posbolainix
+                posbolay = posbolainiy
+                posjogadory = posjoginiy
+                posjogadorx = posjoginix
+                poscpuy = poscpuiniy
+                poscpux = poscpuinix
+                game()
+                }
+        }
+
+        function inicio(){
+            velbola = velcpu = veljog = 8
+            vbtn = document.getElementById('btn')
+            vbtn.addEventListener("click",startjogo)
+            vjogador = document.getElementById('jogador')
+            vcpu = document.getElementById('cpu')
+            vbola = document.getElementById('bola')
+            vpainel = document.getElementById('txtpontos')
+            document.addEventListener("keydown",tecladw)
+            document.addEventListener("keyup",teclaup)
+        }
+
+        window.addEventListener("load",inicio)
+
+    </script>
+</body>
+</html>
