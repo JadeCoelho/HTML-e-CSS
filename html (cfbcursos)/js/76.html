@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <h1 id="tit">titulo</h2>
+    <div id="cursos">
+        <p>Curso de Javascript</p>
+        <p>Curso de HTML5</p>
+        <p>Curso de CSS3</p>
+        <p>Curso de PHP/MySQL</p>
+        <p>Curso de C++</p>
+        <p>Curso de Flash</p>
+        <p>Curso de C#</p>    
+    </div>
+
+    <script>
+    function inicia(){
+        var novoh = document.createElement('h2')
+        var lista = document.getElementById('cursos')
+       // var novotit = document.getElementById('tit')
+        var antigop = lista.childNodes[5]
+        var txth = document.createTextNode(antigop.innerHTML)
+        novoh.appendChild(txth)
+        lista.replaceChild(novoh,antigop)
+    }
+    window.addEventListener("load",inicia)
+    </script>
+</body>
+</html>

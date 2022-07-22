@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+<input type="text" name="" id="fnovo">
+<button id="btnadd">Adicionar</button><br><br><br>
+<ul id="lista"></ul>
+
+    <script>
+    //var p = document.createElement('p')
+   // p.textContent="adicionando o elemento p no body"
+    
+    function inicia(){
+      //  document.body.appendChild(p)
+      document.getElementById('btnadd').addEventListener("click",function(){
+        var lista = document.getElementById('lista')
+        var texto = document.getElementById('fnovo')
+        var li = document.createElement('li')
+        li.textContent=texto.value
+        lista.appendChild(li)
+        texto.value=""
+        texto.focus()
+
+      })
+    }
+    window.addEventListener("load",inicia)
+    </script>
+</body>
+</html>

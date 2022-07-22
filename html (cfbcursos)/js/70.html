@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #dadosf{
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 1px solid yellow;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 6px;
+        display: none;
+       }
+    </style>
+</head>
+<body>
+    <p>aula de localstorage</p>
+    <p id="painel"></p>
+    <button onclick="mostraform()">Configurações</button>
+    <form action="" name="dadosf" id="dadosf">
+        <input type="text" name="nome" id="nome" placeholder="Nome">
+        <br>
+        <label for="">Cor de fundo</label>
+        <input type="radio" name="cor" id="" onclick="definecor(1,'red')"> vermelho
+        <input type="radio" name="cor" id="" onclick="definecor(1,'green')"> verde
+        <input type="radio" name="cor" id="" onclick="definecor(1,'blue')"> azul
+        <input type="radio" name="cor" id="" onclick="definecor(1,'black')"> preto
+        <input type="radio" name="cor" id="" onclick="definecor(1,'gray')"> cinza
+        <br>
+        <label for="">Cor do texto</label>
+        <input type="radio" name="cor" id="" onclick="definecor(2,'black')"> preto
+        <input type="radio" name="cor" id="" onclick="definecor(2,'gray')"> cinza
+        <br>
+        <input type="button" value="Gravar" onclick="gravar()">
+    </form>
+    <script>
+        var vcorf, vcort
+
+        if(localStorage.nome){
+         vcorf = localStorage.corf
+             vcort = localStorage.cort
+             vnome = localStorage.nome
+             definecor(1,vcorf)
+             definecor(2,vcort)
+             document.getElementById('painel').innerHTML = "Bem vindo, "+vnome+"! <br>"
+        } else {
+            document.write("sem suporte ao webstorage")
+        }
+
+        function gravar(){
+            var form = document.getElementById('dadosf')
+            vnome = document.getElementById("nome").value
+            localStorage.corf=vcorf
+            localStorage.cort=vcort
+            localStorage.nome=vnome
+            form.style.display="none"
+        }
+
+        function definecor(op,cor){
+            if(op==1){
+                document.body.style.backgroundColor=cor
+                vcorf = cor
+            } else {
+                document.body.style.color=cor
+                vcort = cor
+            }
+        }
+
+        function mostraform(){
+            var form = document.getElementById('dadosf')
+            form.style.display="block"
+
+        }
+        
+    </script>
+</body>
+</html>

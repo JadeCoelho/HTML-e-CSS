@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <input type="text" name="fnome" id="fnome" size="20" maxlength="20"><br>
+    <button id="btn1">Página 2</button>
+    <button id="btn2">Página 3</button>
+    <button id="btn3">Limpar sessionStorage</button>
+
+    <script>
+        function pag(pg){
+            sessionStorage.nome = document.getElementById("fnome").value
+            if (pg==2){
+                window.location.assign("722.html")
+            } else if (pg==3){
+                window.location.assign("7222.html")
+            }
+          
+        }
+        function inicia(){
+            document.getElementById("btn1").addEventListener("click",function(){
+                pag(2)
+            })
+            document.getElementById("btn2").addEventListener("click",function(){
+                pag(3)
+            })
+            document.getElementById("btn3").addEventListener("click",function(){
+                sessionStorage.clear()
+            })
+        }
+    window.addEventListener("load",inicia)
+    </script>
+</body>
+</html>
