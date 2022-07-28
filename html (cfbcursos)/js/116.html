@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function contar(n){
+        let cont=0
+        for (let i=0;i<n;i++){
+            cont++
+        }
+        return cont
+    }
+
+    function contart(n){
+        let cont=0
+        let t = setTimeout(()=>{
+               for (let i=0;i<n;i++){
+            cont++
+        }
+        },2000)
+     
+        return cont
+    }
+
+    function contarp(n){
+        let cont=0
+        let p = new Promise((resolve,rejected)=>{
+            for (let i=0;i<n;i++){
+            cont++
+        }
+        if(cont==n){
+            resolve(cont)
+        } else {
+            rejected('erro')
+        }
+        })
+        
+        return p
+    }
+
+    function contarpt(n){
+        let cont=0
+        let pt = new Promise((resolve,rejected)=>{
+            let tp = setTimeout(()=>{
+                for (let i=0;i<n;i++){
+                cont++
+                } 
+                if(cont==n){
+                resolve(cont)
+                } else {
+                rejected('erro')
+                }
+            },2000)
+          
+        
+        })
+        
+        return p
+    }
+
+    console.log(contar(100))
+    console.log(contart(10))
+    //console.log(contarp(10)
+   
+
+        contarpt(10)
+        .then(ok => console.log('ok: ' + ok))
+        .catch(erro => console.log('erro: ' + erro))
+
+
+    function somaposit(n1,n2){
+        let sp = new Promise((res,rej)=>{
+            if(n1>=0 && n2>=0){
+                res(n1+n2)
+            } else {
+                rej('erro')
+            }
+        })
+        return sp
+    }
+    //console.log(somaposit(-10,2))
+    somaposit(-10,2)
+    .then(certo => console.log('atenção: ' + certo))
+    .catch(errado => console.log('atenção: ' + errado))
+
+
+   
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

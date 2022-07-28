@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Carro {
+            constructor(c,m){
+                this.cor = c
+                this.modelo = m
+                this.ligado = false
+                this.km = 0
+            }
+            info(){
+                console.log('Cor: '+ this.cor)
+                console.log('Modelo: '+ this.modelo)
+                console.log('Km: '+ this.km)
+                console.log('Ligado: '+ (this.ligado ? 'sim':'não'))
+                console.log('----------------------------')
+            }
+            ligar(){
+                this.ligado = true
+            }
+            desligar(){
+                this.ligado = false
+            }
+        }
+
+        let c1 = new Carro('vermelho','hrv')
+        let c2 = new Carro('preto','golf')
+        let c3 = new Carro('prata','camaro')
+
+        c1.ligar()
+       
+        c1.info()
+        c2.info()
+        c3.info()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

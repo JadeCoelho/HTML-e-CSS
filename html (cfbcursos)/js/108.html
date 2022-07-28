@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let produtos = new Map()
+        produtos.set('01','Mouse')
+        produtos.set('02','HD')
+        produtos.set('03','Monitor')
+        .set('04','Teclado')
+        produtos.set('01','Memória')
+        console.log(produtos.size)
+        console.log(produtos.get('01'))
+
+        let roupas = new Map([
+            ['01','vestido'],
+            ['02','casaco'],
+            ['03','saia'],
+        ])
+        console.log(roupas.size)
+        roupas.set('04','calça')
+        console.log(roupas.size)
+        console.log(roupas.get('02'))
+        for (r of roupas)
+        console.log(r)
+        console.log(r[1])
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

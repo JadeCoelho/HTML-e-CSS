@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function* cores(){
+            yield 'vermelho'
+            yield 'verde'
+            yield 'azul'
+            yield 'amarelo'
+            yield 'roxo'
+            yield 'rosa'
+        }
+        //for(let c of cores()){
+     //       console.log(c)
+      //  }
+     // const c = cores()
+      //console.log(c.next())
+      //console.log(c.next())
+      //console.log(c.next())
+     // console.log(c.next())
+
+     function* cont(n){
+        let c = 0
+        while (c<n){
+          // yield
+           console.log(c)
+            c++
+        }
+     }
+     const ct = cont(10)
+     console.log(ct.next())
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

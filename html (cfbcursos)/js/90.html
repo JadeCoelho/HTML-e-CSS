@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .carro{
+            width: 300px;
+            height: 600px;
+            display: inline;
+            cursor: pointer;
+        }
+        #painel{
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            width: 500px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        function painel(){
+            var obj = event.target
+            var painel = document.getElementById('painel')
+            painel.innerHTML="Modelo: "+obj.dataset.vel + "<br>"
+            painel.innerHTML+="Cor: "+obj.dataset.cor+"<br>"
+            painel.innerHTML+="Potência: "+obj.dataset.pot
+        }
+
+        function inicia(){
+            document.getElementById("c1").addEventListener("click",painel)
+            document.getElementById("c2").addEventListener("click",painel)
+            document.getElementById("c3").addEventListener("click",painel)
+            document.getElementById("c4").addEventListener("click",painel)
+        }
+
+        window.addEventListener("load",inicia)
+    </script>
+</head>
+<body>
+    <div id="painel"></div>
+    <div id="c1" class="carro" >
+        <img src="c1.png" data-cor="branco" data-pot="80" data-vel="120">
+    </div>
+    <div id="c2" class="carro" >
+        <img src="c1.png" data-cor="vermelho" data-pot="350" data-vel="320">
+    </div>
+    <div id="c3" class="carro" >
+        <img src="c1.png" data-cor="amarelo" data-pot="110" data-vel="180">
+    </div>
+    <div id="c4" class="carro" >
+        <img src="c1.png" data-cor="preto" data-pot="220" data-vel="260">
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let num =[0,2,5,8,9,7,4,3,1,25,18,9]
+        let par = num.filter((n)=>{
+            if (n%2 == 0){
+                return n
+            }
+        })
+      //  console.log(num)
+       // console.log(par)
+
+       let dados =[
+        {id:15},
+        {id:0},
+        {id:10},
+        {id:null},
+        {id:NaN},
+        {id:'undefined'},
+        {id:5.8},
+        {id:2},
+    ]
+    let validos = dados.filter((n)=>{
+        if(typeof(n.id)=='number' && !isNaN(n.id)){
+            return true
+        } else {
+            return false
+        }
+    })
+    console.log(dados)
+    console.log(validos)
+    
+      
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

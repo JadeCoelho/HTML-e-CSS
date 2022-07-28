@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const aluno = {nome:'jade',sobrenome:'mattos'}
+        const notas = {nt1: 9.5, nt2: 9.8, nt3: 10}
+        const info ={...aluno,...notas}
+
+        let situ = ['excelente','ótimo','bom','regular','irregular']
+        
+        for (var  dado in aluno){
+            //console.log(dado) pega os atributos
+            //console.log(aluno[dado]) pega os valores dos atributos
+            //console.log(info[dado])
+        }
+
+        for (var s of situ){
+            console.log(s) 
+            //o of pega os valores de um array, o in pegaria só as posições
+        }
+        
+        let nota = [100,80,75,30,64,47,98,81,60]
+        let aprovados=0
+        let reprovados=0
+        for (var n of nota){
+            n>=60? aprovados++ : reprovados++
+        }
+        console.log('aprovados: '+aprovados)
+        console.log('reprovados: '+reprovados)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

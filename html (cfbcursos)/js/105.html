@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const carro = {
+            marca: 'VW',
+            modelo: 'Golf',
+            info: function(){
+                console.log('marca: '+ this.marca)
+                console.log('modelo: '+ this.modelo)
+            }
+        }
+        let c2 = Object.create(carro)
+        c2.marca='honda'
+        c2.modelo='hrv'
+        let c3 = Object.create(carro)
+        //console.log(carro.marca)
+       // console.log(carro.modelo)
+       carro.marca='honda'
+       carro.modelo='hrv'
+       carro['marca'] = 'ford'
+       carro['modelo'] = 'ranger'
+       carro.info()
+       c2.info()
+       c3.info()
+
+
+       const veiculo = {
+        marca: 'VW',
+        modelo: 'Golf',
+        info: function(){
+                console.log('marca: '+ this.marca)
+                console.log('modelo: '+ this.modelo)
+            }
+       }
+       const caracteristicas = {
+        cor: 'cinza',
+        cambio: 'automático'
+       }
+
+       delete caracteristicas.cor
+
+       const car = Object.assign(veiculo,caracteristicas)
+       console.log(car)
+       car.info()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

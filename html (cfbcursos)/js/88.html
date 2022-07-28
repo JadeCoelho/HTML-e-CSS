@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         function ativo(){
+            var cx = document.getElementById('txts')
+            var elemento = document.activeElement
+            var selecao = elemento.value.substring(elemento.selectionStart,elemento.selectionEnd)
+            cx.innerHTML=selecao
+
+           // document.getElementById('txts').innerHTML = document.activeElement.value.substring(document.activeElement.selectionStart,document.activeElement.selectionEnd)
+         }
+
+        function inicia(){
+            var txt = document.getElementById('txta')
+            txt.addEventListener('mouseup',ativo)
+        }
+
+        window.addEventListener("load",inicia)
+    </script>
+</head>
+<body>
+
+    <textarea rows="5" cols="20" id="txta">cfb cursos - curso de js - aula 88</textarea><br>
+    Texto selecionado: <span id="txts"></span>
+
+    
+</body>
+</html>

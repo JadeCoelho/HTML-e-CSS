@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+     let produtos = new Map([
+        ['01',['Mouse','15,00']],
+        ['02',['HD','55,00']],
+        ['03',['Monitor','445,00']],
+        ['04',['Teclado','35,00']]
+     ])
+        produtos.set('05',['Memória','199,00'])
+        console.log(produtos.size)
+        //produtos.clear()
+        produtos.delete('02')
+        
+   
+        console.log(produtos.size)
+        for (p of produtos)
+        console.log(p[1][0])
+
+        let roupas = new Map([
+        ['01','Vestido'],
+        ['02','Saia'],
+        ['03','Jaqueta'],
+        ['04','Meia calça']
+     ])
+        function info(chave,peca){
+            console.log('chave: '+chave + ' - peça: '+peca)
+        }
+        roupas.forEach(info) 
+
+        let itk = roupas.keys()
+        let itv = roupas.values()
+        console.log(itk.next().value)
+        console.log(itv.next().value)
+        console.log(itk.next().value)
+        console.log(itv.next().value)
+        console.log(roupas.has('05')? 'produto encontrado':'produto não encontrado')
+        console.log(roupas.has('02')? 'produto encontrado':'produto não encontrado')
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

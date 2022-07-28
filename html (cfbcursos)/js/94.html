@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function criarcookie(nome,valor,expira){
+            var dtexpira = "expires="+expira
+            document.cookie = nome +"="+valor+"; " + dtexpira;
+        }
+        function lercookie(nome){
+            var vnome = nome +"=";
+            var ca = document.cookie.split(';');
+            for(var i =0;i<ca.length;i++){
+                var c = ca[i];
+                while(c.charAt(0)==" "){
+                    c = c.substring(1);
+                }
+                if (c.indexOf(vnome) ==0 ) 
+                    return c.substring(vnome.length,c.length);
+            }
+            return "";
+        }
+
+        function verificacookie(){
+            var username = lercookie("username");
+            if (username != ""){
+                alert('Bem vindo novamente, '+ username);
+            } else {
+                username = prompt("Digite seu nome:","")
+                if (username!="" && username != null){
+                    criarcookie("username",username," Tue, 26 Jul 2022 12:00:00 UTC")
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="verificacookie()">
+    
+</body>
+</html>

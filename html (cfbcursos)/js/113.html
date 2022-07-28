@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Carro {
+            static alerta = true
+            constructor(c,m){
+                this.cor = c
+                this.modelo = m
+                this.ligado = false
+                this.km = 0
+                this.comb = 10
+          
+            }
+            info(){
+                console.log('Cor: '+ this.cor)
+                console.log('Modelo: '+ this.modelo)
+                console.log('Km: '+ this.km)
+                console.log('Combustível: '+ this.comb)
+                console.log('Ligado: '+ (this.ligado ? 'sim':'não'))
+                console.log('alerta: '+ (Carro.alerta ? 'sim':'não'))
+                console.log('----------------------------')
+            }
+            ligar(){
+                this.ligado = true
+            }
+            desligar(){
+                this.ligado = false
+            }
+            set setComb(v){
+                if (v<0 || v>100){
+                    alert('valor inválido')
+                } else {
+                    this.comb = v
+                    console.log('combustível alterado. Valor atual: '+this.comb)
+            }
+                }
+               
+            get gComb(){
+                return this.comb
+            }
+
+            setAlerta(t){
+                Carro.alerta=t
+            }
+
+        }
+
+        let c1 = new Carro('vermelho','hrv')
+        let c2 = new Carro('preto','golf')
+        let c3 = new Carro('prata','camaro')
+
+        c1.ligar()
+        c1.setComb=100
+       // console.log(c1.gComb())
+       console.log(c1.gComb)
+       //c1.setAlerta(false)
+       Carro.alerta=false
+       
+        c1.info()
+        c2.info()
+        c3.info()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

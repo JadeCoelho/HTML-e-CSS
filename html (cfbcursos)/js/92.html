@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+        }
+        .carro{
+            width: 250px;
+            margin-bottom: 50px;
+        }
+        .item{
+            height: 100%;
+            cursor: pointer;
+        }
+        #menu{
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            width: 500px;
+            height: 100px;
+            background-color: white;
+        }
+    </style>
+        <script>
+            function mostrar(){
+                for(var i = 1;i<5;i++){
+                    document.getElementById('c'+i).hidden=true
+                }
+                var obj = event.target.dataset.nome
+                    document.getElementById(obj).hidden=false
+    
+            }
+            function inicia(){
+                for(var i = 1;i<5;i++){
+                    document.getElementById('c'+i).hidden=true
+                }
+                document.getElementById('ic1').addEventListener("click",mostrar)
+                document.getElementById('ic2').addEventListener("click",mostrar)
+                document.getElementById('ic3').addEventListener("click",mostrar)
+                document.getElementById('ic4').addEventListener("click",mostrar)
+    
+           
+            }
+            window.addEventListener("load",inicia)
+        </script>
+</head>
+<body>
+    <div id="menu">
+        <img src="c1.png" alt="" id="ic1" class="item" data-nome="c1">
+        <img src="c2.png" alt="" id="ic2" class="item" data-nome="c2">
+        <img src="c3.png" alt="" id="ic3" class="item" data-nome="c3">
+        <img src="c4.png" alt="" id="ic4" class="item" data-nome="c4">
+    </div>
+
+    <img src="c1.png" alt="" class="carro" id="c1" onclick="sumir('c1')">
+    <img src="c2.png" alt="" class="carro" id="c2" onclick="sumir('c2')">
+    <img src="c3.png" alt="" class="carro" id="c3" onclick="sumir('c3')">
+    <img src="c4.png" alt="" class="carro" id="c4" onclick="sumir('c4')">
+</body>
+</html>
