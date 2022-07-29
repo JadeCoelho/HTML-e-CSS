@@ -6,91 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-            Object.prototype
-        class Carro {
-        
-            constructor(tpc,tpcomb){
-                this.tipo = tpc
-                this.qtdc=100
-                this.ligado=false
-                this.tipoc= tpcomb
-          
-            }
-            info(){
-                console.log('Qtde Comb: '+ this.qtdc)
-                console.log('Ligado: '+ (this.ligado ? 'sim':'não'))
-                console.log('Tipo Comb: '+ this.tipoc)
-                if(this.tipo==1){
-                    console.log('Tipo Carro: Passeio')
-                } else if(this.tipo==2){
-                    console.log('Tipo Carro: Transporte')
-                } else if (this.tipo==3){
-                    console.log('Tipo Carro: Combate')
-                }
-                
-            }
-            set setligado(t){
-                this.ligado = t
-            }
-            get getligado(){
-               return this.ligado 
-            }
-            set setComb(v){
-                if (v<0 || v>100){
-                    alert('valor inválido')
-                } else {
-                    this.qtdc = v
-                }
-        }
-        get gComb(){
-                return this.qtdc
-            }
-    }
+     let colabJSON = '{"colaboradores":['+
+     '{"nome":"Gualinson","salario":10000,"idade":2},'+
+     '{"nome":"Guelinson","salario":10000,"idade":3},'+
+     '{"nome":"Guilinson","salario":10000,"idade":4},'+
+     '{"nome":"Guolinson","salario":10000,"idade":5},'+
+     '{"nome":"Guulinson","salario":10000,"idade":6}'+
+     ']}'
 
-    class carrocombate extends Carro{
-        constructor(pott){
-            super(3,2)
-            this.tiros=1000
-            this.pot= pott
-            this.blindagem = 100
-        }
-        info(){
-            super.info()
-            console.log('Qtd tiros: '+ this.tiros)
-            console.log('Pot tiro: '+ this.pot)
-            console.log('Blindagem: '+ this.blindagem)
-            console.log('----------------------------')
-        }
+     let cobj = JSON.parse(colabJSON)
+     console.log(cobj)
+     console.log(cobj.colaboradores[0].nome)
 
-    }
-    class carrotransporte extends Carro{
-            constructor(){
-            super(2,2)
-        }
-    }
+     let colabOBJ = [
+        {"nome":"Gualinson","salario":10000,"idade":2},
+        {"nome":"Guelinson","salario":10000,"idade":2},
+        {"nome":"Guilinson","salario":10000,"idade":2},
+        {"nome":"Guolinson","salario":10000,"idade":3},
+        {"nome":"Guulinson","salario":10000,"idade":4}
+        ]
 
-    Carro.prototype.potencia = 500
-    Carro.prototype.velocidade = 0
-    Carro.prototype.velmax = 0
-    Carro.prototype.info2=function(){
-        this.info()
-                console.log('Potência: '+ this.potencia)
-                console.log('Velocidade: '+ this.velocidade)
-                console.log('Velocidade máxima: '+ this.velmax)
-               
-    }
-
-        let c1 = new carrocombate(100)
-        let c2 = new carrocombate(50)
-        let c3 = new carrotransporte(50)
-
-        c1.setligado=true
-    
-        c1.info2()
-        console.log(c1.potencia)
-        console.log(c2.potencia)
-        
-       
+     let cjson = JSON.stringify(colabOBJ)
+     console.log(cjson)
+     
+     let c = {"nome":"Gualinson","salario":10000,"idade":2}
+     let colab = JSON.stringify(c)
+     console.log(c)
       
     </script>
 </head>

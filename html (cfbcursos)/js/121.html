@@ -6,91 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-            Object.prototype
-        class Carro {
-        
-            constructor(tpc,tpcomb){
-                this.tipo = tpc
-                this.qtdc=100
-                this.ligado=false
-                this.tipoc= tpcomb
-          
-            }
-            info(){
-                console.log('Qtde Comb: '+ this.qtdc)
-                console.log('Ligado: '+ (this.ligado ? 'sim':'não'))
-                console.log('Tipo Comb: '+ this.tipoc)
-                if(this.tipo==1){
-                    console.log('Tipo Carro: Passeio')
-                } else if(this.tipo==2){
-                    console.log('Tipo Carro: Transporte')
-                } else if (this.tipo==3){
-                    console.log('Tipo Carro: Combate')
-                }
-                
-            }
-            set setligado(t){
-                this.ligado = t
-            }
-            get getligado(){
-               return this.ligado 
-            }
-            set setComb(v){
-                if (v<0 || v>100){
-                    alert('valor inválido')
-                } else {
-                    this.qtdc = v
-                }
-        }
-        get gComb(){
-                return this.qtdc
-            }
-    }
+     let pessoa = [
+        {nome:'jade',idade:22},
+        {nome:'yuri',idade:22},
+        {nome:'fred',idade:13},
+        {nome:'Moisés',idade:0.2}
 
-    class carrocombate extends Carro{
-        constructor(pott){
-            super(3,2)
-            this.tiros=1000
-            this.pot= pott
-            this.blindagem = 100
-        }
-        info(){
-            super.info()
-            console.log('Qtd tiros: '+ this.tiros)
-            console.log('Pot tiro: '+ this.pot)
-            console.log('Blindagem: '+ this.blindagem)
-            console.log('----------------------------')
-        }
+     ]
+     let nms = pessoa.reduce((p1,p2)=>{
+        p1.push(p2.nome)
+        return p1
+     },[])
+     console.log(nms)
 
-    }
-    class carrotransporte extends Carro{
-            constructor(){
-            super(2,2)
-        }
-    }
+     let idade = pessoa.reduce((p1,p2)=>{
+        p1.push(p2.idade)
+        return p1
+     },[])
+     console.log(idade)
 
-    Carro.prototype.potencia = 500
-    Carro.prototype.velocidade = 0
-    Carro.prototype.velmax = 0
-    Carro.prototype.info2=function(){
-        this.info()
-                console.log('Potência: '+ this.potencia)
-                console.log('Velocidade: '+ this.velocidade)
-                console.log('Velocidade máxima: '+ this.velmax)
-               
-    }
-
-        let c1 = new carrocombate(100)
-        let c2 = new carrocombate(50)
-        let c3 = new carrotransporte(50)
-
-        c1.setligado=true
-    
-        c1.info2()
-        console.log(c1.potencia)
-        console.log(c2.potencia)
-        
-       
+     let num = [0,1,2,3,4,5]
+     let soma = num.reduce((n1,n2)=>{
+        console.log(n1+' + '+n2)
+        return n1+n2
+        console.log('-------')
+     })
+     console.log(soma)
       
     </script>
 </head>
